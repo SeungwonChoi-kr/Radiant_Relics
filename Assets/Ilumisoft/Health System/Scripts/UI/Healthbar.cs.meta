@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 1d22e735f8797cc42a86a2f41525fc4f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 248090
+  packageName: Game Core - Health System
+  packageVersion: 1.0
+  assetPath: Assets/Ilumisoft/Health System/Scripts/UI/Healthbar.cs
+  uploadId: 571247

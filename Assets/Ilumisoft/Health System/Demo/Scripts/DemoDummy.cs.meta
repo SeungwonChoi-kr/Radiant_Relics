@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 407bc93e190e1d047a0b22fef51bb452
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 248090
+  packageName: Game Core - Health System
+  packageVersion: 1.0
+  assetPath: Assets/Ilumisoft/Health System/Demo/Scripts/DemoDummy.cs
+  uploadId: 571247

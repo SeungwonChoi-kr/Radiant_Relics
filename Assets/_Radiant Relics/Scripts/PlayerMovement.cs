@@ -5,6 +5,8 @@ using System.Linq;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerMovement : MonoBehaviour
 {
+    private PlayerStamina playerStamina;
+
     private CharacterController controller;
     private Camera playerCamera;
 
@@ -25,7 +27,9 @@ public class PlayerMovement : MonoBehaviour
     public bool enableRun = true;
     
     private bool isRunning = false;
-    
+
+    public bool IsRunning => isRunning;
+
     // [신규] 물 관련 변수
     [Header("물 설정")]
     [Tooltip("물 레이어 번호")]
@@ -42,6 +46,13 @@ public class PlayerMovement : MonoBehaviour
     {
         controller = gameObject.GetComponent<CharacterController>();
         playerCamera = Camera.main;
+
+        playerStamina = GetComponent<PlayerStamina>();
+
+        if (playerStamina == null)
+        {
+            Debug.LogError("PlayerStamina 컴포넌트를 찾을 수 없습니다!");
+        }
 
         // [신규] 시작 위치 설정
         if (useCustomStartPosition)
@@ -231,18 +242,41 @@ public class PlayerMovement : MonoBehaviour
         
         isRunning = isPressingW && isPressingShift && groundedPlayer;
     }
-    
+
     // [개선됨] 점프 입력을 처리하는 함수
     private void HandleJumpInput()
     {
         if (Input.GetButtonDown("Jump") && groundedPlayer)
         {
+            // PlayerStamina 참조 후 jumpCost 사용
+            if (playerStamina == null || !playerStamina.HasStamina(playerStamina.jumpCost))
+                return; // 스테미너 부족 시 점프 안 함
+
+            // 점프 실행
+            float jumpVelocity = Mathf.Sqrt(GameManager.Instance.jumpHeight * -2.0f * GameManager.Instance.gravityValue);
+            playerVelocity.y = jumpVelocity;
+
+            // 스테미너 차감
+            playerStamina.jumpReduceStamina(playerStamina.jumpCost);
+        }
+    }
+    /*
+    private void HandleJumpInput()
+    {
+        if (Input.GetButtonDown("Jump") && groundedPlayer)
+        {
+            if (!playerStamina.HasStamina(jumpCost))
+                return; // 스테미너 부족하면 점프 안 함
+
             // 점프 힘 계산 및 적용
             float jumpVelocity = Mathf.Sqrt(GameManager.Instance.jumpHeight * -2.0f * GameManager.Instance.gravityValue);
             playerVelocity.y = jumpVelocity;
+
+            playerStamina.jumpReduceStamina(playerStamina.jumpCost);
         }
     }
-    
+    */
+
     // [신규] 중력을 적용하는 함수
     private void ApplyGravity()
     {
@@ -343,4 +377,13 @@ public class PlayerMovement : MonoBehaviour
         Vector3 adjustedPosition = GetTerrainAdjustedPosition(currentXZ);
         SetPlayerPosition(adjustedPosition);
     }
+
+    // PlayerStamina에서 호출하여 강제로 달리기 종료
+
+    public void ForceStopRunning()
+    {
+        isRunning = false;
+    }
+
+
 }

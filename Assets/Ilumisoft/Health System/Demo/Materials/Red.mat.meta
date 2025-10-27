@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 49e192b58ab530949871106971e13456
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 248090
+  packageName: Game Core - Health System
+  packageVersion: 1.0
+  assetPath: Assets/Ilumisoft/Health System/Demo/Materials/Red.mat
+  uploadId: 571247

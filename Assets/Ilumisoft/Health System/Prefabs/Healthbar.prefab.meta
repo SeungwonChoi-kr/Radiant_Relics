@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 351baf954590df348a71254a311227b1
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 248090
+  packageName: Game Core - Health System
+  packageVersion: 1.0
+  assetPath: Assets/Ilumisoft/Health System/Prefabs/Healthbar.prefab
+  uploadId: 571247

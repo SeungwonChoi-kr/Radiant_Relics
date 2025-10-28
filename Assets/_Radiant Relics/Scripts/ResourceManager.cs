@@ -26,6 +26,7 @@ public class ResourceManager : MonoBehaviour
 
     [Header("자원 정보")]
     public List<ResourceData> resourceList;
+    private Dictionary<string, GameObject> resourcePrefabMap;
     public List<SourceMine> sourceMines;
 
     [Header("스폰 포인트 생성 설정")]
@@ -43,6 +44,15 @@ public class ResourceManager : MonoBehaviour
     private void Awake()
     {
         if (Instance == null) { Instance = this; } else { Destroy(gameObject); }
+
+        resourcePrefabMap = new Dictionary<string, GameObject>();
+        foreach (var resource in resourceList)
+        {
+            if (!resourcePrefabMap.ContainsKey(resource.name))
+            {
+                resourcePrefabMap[resource.name] = resource.prefab;
+            }
+        }
     }
 
     private void Update()
@@ -64,8 +74,8 @@ public class ResourceManager : MonoBehaviour
         {
             if (sp != null)
             {
-                float distance = Vector3.Distance(playerTransform.position, sp.transform.position);
-                bool isPlayerNear = distance <= detectionRadius;
+                float sqrDistance = (playerTransform.position - sp.transform.position).sqrMagnitude;
+                bool isPlayerNear = sqrDistance <= detectionRadius * detectionRadius;
 
                 // 각 스폰 포인트에게 플레이어가 근처에 있는지 없는지 신호를 보냅니다.
                 // 모든 상태 판단과 로직은 이제 스폰 포인트가 알아서 처리합니다.
@@ -78,10 +88,17 @@ public class ResourceManager : MonoBehaviour
     #region Unchanged Methods
     public void GenerateSpawnPoints()
     {
+        if (allTerrains == null || allTerrains.Count == 0) {
+            Debug.LogError("No terrains found in the scene.");
+            return;
+        }
+
         if (spawnPointParent != null) Destroy(spawnPointParent.gameObject);
         spawnPointParent = new GameObject("Spawn Points").transform;
         allSpawnPoints.Clear();
+
         List<Vector3> placedPositions = new List<Vector3>();
+
         for (int i = 0; i < numberOfSpawns; i++)
         {
             int attempts = 0;
@@ -129,7 +146,10 @@ public class ResourceManager : MonoBehaviour
         {
             if (randomValue < weights[mine.resourceName])
             {
-                return resourceList.Find(r => r.name == mine.resourceName)?.prefab;
+                if (resourcePrefabMap.TryGetValue(mine.resourceName, out GameObject prefab))
+                {
+                    return prefab;
+                }
             }
             randomValue -= weights[mine.resourceName];
         }

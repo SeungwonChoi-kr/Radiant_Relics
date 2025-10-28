@@ -73,6 +73,10 @@ public class ResourceSpawnPoint : MonoBehaviour
     public void OnMined()
     {
         currentState = SpawnPointState.Depleted;
+        if (spawnedResource != null)
+        {
+            Destroy(spawnedResource);
+        }
         spawnedResource = null;
     }
 

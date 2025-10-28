@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 87af644bd4cad794ca44344da49fe5cf
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 112000000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 337200
+  packageName: "PolyPeople Series \u2013 Medieval Europe: Peasants"
+  packageVersion: 1.0
+  assetPath: Assets/PolyPeople_MedievalEurope_Peasants/Scenes/Demo/LightingData.asset
+  uploadId: 797902

@@ -8,10 +8,7 @@ public class ResourceManager : MonoBehaviour
     public static ResourceManager Instance { get; private set; }
 
     [System.Serializable]
-    public class ResourceData { public string name; public GameObject prefab; }
-
-    [System.Serializable]
-    public class SourceMine { public string resourceName; public Transform mineLocation; }
+    public class SourceMine { public string resourceName; public Transform mineLocation; public GameObject resourcePrefab; }
 
     [Header("플레이어 설정")]
     public Transform playerTransform;
@@ -25,7 +22,6 @@ public class ResourceManager : MonoBehaviour
     public float globalDiscoveryChance = 0.7f; // 기본 70% 확률
 
     [Header("자원 정보")]
-    public List<ResourceData> resourceList;
     private Dictionary<string, GameObject> resourcePrefabMap;
     public List<SourceMine> sourceMines;
 
@@ -46,11 +42,11 @@ public class ResourceManager : MonoBehaviour
         if (Instance == null) { Instance = this; } else { Destroy(gameObject); }
 
         resourcePrefabMap = new Dictionary<string, GameObject>();
-        foreach (var resource in resourceList)
+        foreach (var mine in sourceMines)
         {
-            if (!resourcePrefabMap.ContainsKey(resource.name))
+            if (!resourcePrefabMap.ContainsKey(mine.resourceName) && mine.resourcePrefab != null)
             {
-                resourcePrefabMap[resource.name] = resource.prefab;
+                resourcePrefabMap[mine.resourceName] = mine.resourcePrefab;
             }
         }
     }

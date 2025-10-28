@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: d430e0f674cdc47468a34e8bdc0df7c1
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 625f186215c104763be7675aa2d941aa, type: 3}
+AssetOrigin:
+  serializedVersion: 1
+  productId: 337200
+  packageName: "PolyPeople Series \u2013 Medieval Europe: Peasants"
+  packageVersion: 1.0
+  assetPath: Assets/PolyPeople_MedievalEurope_Peasants/Materials/MedievalEurope_Peasants_B_CustomSkin.shadergraph
+  uploadId: 797902

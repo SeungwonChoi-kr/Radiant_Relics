@@ -14,7 +14,7 @@ public class MetalDetector : MonoBehaviour
     public LayerMask metalLayer;       // "금속"으로 감지할 오브젝트의 레이어 마스크
 
     [Header("UI Elements")]
-    public Image[] signalBars; // 신호 세기를 표시할 8개의 UI 이미지 배열
+    public Image[] signalBars; // 신호 세기를 표시할 9개의 UI 이미지 배열
 
     [Header("Audio Settings")]
     public AudioSource beepAudio;      // 경고음을 재생할 AudioSource 컴포넌트
@@ -84,16 +84,16 @@ public class MetalDetector : MonoBehaviour
     /// <param name="intensity">0.0 (약함) ~ 1.0 (강함) 사이의 신호 강도</param>
     void UpdateSignalBars(float intensity)
     {
-        signalBars[8].color = new Color(0, 0.3f, 0);
-        // 강도(0~1)에 총 막대 수를 곱하여 활성화할 막대의 개수를 계산 (반올림)
+        signalBars[8].color = new Color(0, 0.3f, 0);//탐지 범위 내에 없으면 꺼짐
+        // 강도(0~1)에 총 막대 수(스위치 제외)를 곱하여 활성화할 막대의 개수를 계산 (반올림)
         int activeBars = Mathf.RoundToInt(intensity * (signalBars.Length -1));
 
-        // 모든 신호 막대를 순회
+        // 스위치(8번)를 제외한 모든 신호 막대를 순회
         for (int i = 0; i < (signalBars.Length -1); i++)
         {
             if (intensity > 0)
             {
-                signalBars[8].color = Color.green;
+                signalBars[8].color = Color.green;//탐지 범위내에 있으면 켜짐, index == 8은 스위치 역할
             }
             // 현재 막대의 인덱스(i)가 활성화할 개수(activeBars)보다 작으면
             if (i < activeBars)

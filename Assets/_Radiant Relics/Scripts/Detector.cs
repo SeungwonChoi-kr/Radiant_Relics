@@ -87,14 +87,13 @@ public class MetalDetector : MonoBehaviour
         signalBars[8].color = new Color(0, 0.3f, 0);//탐지 범위 내에 없으면 꺼짐
         // 강도(0~1)에 총 막대 수(스위치 제외)를 곱하여 활성화할 막대의 개수를 계산 (반올림)
         int activeBars = Mathf.RoundToInt(intensity * (signalBars.Length -1));
-
+        if (intensity > 0)
+        {
+            signalBars[8].color = Color.green;//탐지 범위내에 있으면 켜짐, index == 8은 스위치 역할
+        }
         // 스위치(8번)를 제외한 모든 신호 막대를 순회
         for (int i = 0; i < (signalBars.Length -1); i++)
         {
-            if (intensity > 0)
-            {
-                signalBars[8].color = Color.green;//탐지 범위내에 있으면 켜짐, index == 8은 스위치 역할
-            }
             // 현재 막대의 인덱스(i)가 활성화할 개수(activeBars)보다 작으면
             if (i < activeBars)
             {

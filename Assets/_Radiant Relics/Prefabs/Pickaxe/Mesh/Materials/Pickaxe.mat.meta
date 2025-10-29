@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8665c353d43cbec4c89759b32b33b3d6
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 319611
+  packageName: Pickaxe low-poly
+  packageVersion: 1.1
+  assetPath: Assets/Pickaxe/Mesh/Materials/Pickaxe.mat
+  uploadId: 795942

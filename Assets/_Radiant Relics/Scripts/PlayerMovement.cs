@@ -46,7 +46,11 @@ public class PlayerMovement : MonoBehaviour
         controller = gameObject.GetComponent<CharacterController>();
         playerCamera = Camera.main;
 
-        playerStamina = GetComponent<PlayerStamina>();
+        //playerStamina = GetComponent<PlayerStamina>();
+
+        playerStamina = GetComponentInChildren<PlayerStamina>();
+
+        Debug.Log(playerStamina != null ? "PlayerStamina 참조 OK" : "PlayerStamina 참조 없음");
 
         if (playerStamina == null)
         {
@@ -95,6 +99,9 @@ public class PlayerMovement : MonoBehaviour
         // 수평 이동과 수직 이동을 합쳐서 한 번만 Move()를 호출합니다.
         Vector3 finalMove = (horizontalVelocity + playerVelocity) * Time.deltaTime;
         controller.Move(finalMove);
+
+        Debug.Log($"GroundedPlayer: {groundedPlayer}, Controller.isGrounded: {controller.isGrounded}");
+
     }
 
     // 착지 시 로직을 처리하는 함수
@@ -226,7 +233,8 @@ public class PlayerMovement : MonoBehaviour
             // Debug.Log($"물 영역에서 나옴: {other.gameObject.name}");
         }
     }
-    
+
+    /*
     // 달리기 입력을 처리하는 함수
     private void HandleRunInput()
     {
@@ -237,7 +245,26 @@ public class PlayerMovement : MonoBehaviour
         bool isPressingShift = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
         
         isRunning = isPressingW && isPressingShift && groundedPlayer;
+        Debug.Log($"W: {isPressingW}, Shift: {isPressingShift}, Grounded: {groundedPlayer}");
+
     }
+    */
+
+    // 달리기 입력을 처리하는 함수
+    private void HandleRunInput()
+    {
+        if (!enableRun) return;
+
+        // Shift + W (앞으로) 조합만 달리기 가능
+        bool isPressingW = Input.GetAxisRaw("Vertical") > 0.1f;
+        bool isPressingShift = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
+
+        // 기존 구조 유지
+        isRunning = isPressingW && isPressingShift && groundedPlayer;
+
+        //Debug.Log($"W: {isPressingW}, Shift: {isPressingShift}, Grounded: {groundedPlayer}, IsRunning: {isRunning}");
+    }
+
 
     // [개선됨] 점프 입력을 처리하는 함수
     private void HandleJumpInput()

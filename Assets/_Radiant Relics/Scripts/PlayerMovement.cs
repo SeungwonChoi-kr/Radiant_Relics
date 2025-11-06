@@ -4,6 +4,8 @@ using System.Linq;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerMovement : MonoBehaviour
 {
+    private PlayerStamina playerStamina;
+
     private CharacterController controller;
     private Camera playerCamera;
     private Animator animator;
@@ -36,14 +38,14 @@ public class PlayerMovement : MonoBehaviour
     // 시작 위치 설정 변수
     [Header("시작 위치 설정")]
 
-	[Tooltip("인스펙터에서 입력한 X/Z를 시작 위치로 사용")]
-	public bool useInspectorStartXZ = false;
+    [Tooltip("인스펙터에서 입력한 X/Z를 시작 위치로 사용")]
+    public bool useInspectorStartXZ = false;
 
-	[Tooltip("시작 X 좌표 (useInspectorStartXZ가 켜져 있을 때만 사용)")]
-	public float startX = 0f;
+    [Tooltip("시작 X 좌표 (useInspectorStartXZ가 켜져 있을 때만 사용)")]
+    public float startX = 0f;
 
-	[Tooltip("시작 Z 좌표 (useInspectorStartXZ가 켜져 있을 때만 사용)")]
-	public float startZ = 0f;
+    [Tooltip("시작 Z 좌표 (useInspectorStartXZ가 켜져 있을 때만 사용)")]
+    public float startZ = 0f;
 
     private void Start()
     {
@@ -51,16 +53,22 @@ public class PlayerMovement : MonoBehaviour
         animator = transform.GetComponentInChildren<Animator>();
         playerCamera = Camera.main;
 
-		// 시작 위치 설정 (항상 적용)
-		// 인스펙터 값 사용 여부에 따라 X/Z 결정
-		Vector2 currentXZ = useInspectorStartXZ
-			? new Vector2(startX, startZ)
-			: new Vector2(transform.position.x, transform.position.z);
-		float heightOffset = GameManager.Instance.playerTerrainHeightOffset;
+        playerStamina = GetComponent<PlayerStamina>();
 
-		// X, Z는 선택된 값으로 사용하고, Y만 터레인 높이에 맞춰 자동 계산
-		Vector3 spawnPosition = GetTerrainAdjustedPosition(currentXZ, heightOffset);
-		SetPlayerPosition(spawnPosition);
+        if (playerStamina == null)
+        {
+            Debug.LogError("PlayerStamina 컴포넌트를 찾을 수 없습니다!");
+        }
+
+        // 인스펙터 값 사용 여부에 따라 X/Z 결정
+        Vector2 currentXZ = useInspectorStartXZ
+            ? new Vector2(startX, startZ)
+            : new Vector2(transform.position.x, transform.position.z);
+        float heightOffset = GameManager.Instance.playerTerrainHeightOffset;
+
+        // X, Z는 선택된 값으로 사용하고, Y만 터레인 높이에 맞춰 자동 계산
+        Vector3 spawnPosition = GetTerrainAdjustedPosition(currentXZ, heightOffset);
+        SetPlayerPosition(spawnPosition);
     }
 
     void Update()
@@ -102,14 +110,14 @@ public class PlayerMovement : MonoBehaviour
         if (groundedPlayer && !wasGroundedLastFrame)
         {
             // playerVelocity.y를 -2f 정도로 설정하여 바닥에 확실히 붙도록 합니다.
-            playerVelocity.y = -2f; 
+            playerVelocity.y = -2f;
             landingTimer = landingGracePeriod; // 착지 유예 시간 시작
         }
 
         if (groundedPlayer)
         {
             // 착지 타이머 감소
-            if(landingTimer > 0)
+            if (landingTimer > 0)
             {
                 landingTimer -= Time.deltaTime;
             }
@@ -242,9 +250,16 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump") && groundedPlayer)
         {
-            // 점프 힘 계산 및 적용
+            // PlayerStamina 참조 후 jumpCost 사용
+            if (playerStamina == null || !playerStamina.HasStamina(playerStamina.jumpCost))
+                return; // 스테미너 부족 시 점프 안 함
+
+            // 점프 실행
             float jumpVelocity = Mathf.Sqrt(GameManager.Instance.jumpHeight * -2.0f * GameManager.Instance.gravityValue);
             playerVelocity.y = jumpVelocity;
+
+            // 스테미너 차감
+            playerStamina.jumpReduceStamina(playerStamina.jumpCost);
         }
     }
 
@@ -312,7 +327,7 @@ public class PlayerMovement : MonoBehaviour
                 int heightmapHeight = terrain.terrainData.heightmapResolution;
 
                 // 터레인 범위 내에 있는지 확인
-                if (localX >= 0 && localX < terrain.terrainData.size.x && 
+                if (localX >= 0 && localX < terrain.terrainData.size.x &&
                     localZ >= 0 && localZ < terrain.terrainData.size.z)
                 {
                     float normalizedX = localX / terrain.terrainData.size.x;
@@ -348,4 +363,13 @@ public class PlayerMovement : MonoBehaviour
         Vector3 adjustedPosition = GetTerrainAdjustedPosition(currentXZ);
         SetPlayerPosition(adjustedPosition);
     }
+
+    // PlayerStamina에서 호출하여 강제로 달리기 종료
+
+    public void ForceStopRunning()
+    {
+        isRunning = false;
+    }
+
+
 }

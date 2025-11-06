@@ -24,6 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4531480910169017470}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -35,7 +36,6 @@ Transform:
   - {fileID: 4137036316487161222}
   - {fileID: 4137036316489467744}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!205 &4531480910169017469
 LODGroup:
@@ -77,6 +77,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 4531480910169017468}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 658215a83aae94c46a21910bd9ef5759, type: 3}
@@ -124,14 +125,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 658215a83aae94c46a21910bd9ef5759, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 613d2df3aa7abc9428fd270f9a3998cf, type: 2}
+      objectReference: {fileID: 2100000, guid: 3a58d794fd276a643850b5ee67b6c271, type: 2}
     - target: {fileID: 919132149155446097, guid: 658215a83aae94c46a21910bd9ef5759, type: 3}
       propertyPath: m_Name
       value: plate_lod4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 658215a83aae94c46a21910bd9ef5759, type: 3}
 --- !u!23 &2964098908883598351 stripped
 MeshRenderer:
@@ -148,6 +152,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 4531480910169017468}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 0e0a1291eb326d143aa46b11fafea792, type: 3}
@@ -195,14 +200,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 0e0a1291eb326d143aa46b11fafea792, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 613d2df3aa7abc9428fd270f9a3998cf, type: 2}
+      objectReference: {fileID: 2100000, guid: 3a58d794fd276a643850b5ee67b6c271, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e0a1291eb326d143aa46b11fafea792, type: 3}
       propertyPath: m_Name
       value: plate_lod3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e0a1291eb326d143aa46b11fafea792, type: 3}
 --- !u!23 &2964098908881710825 stripped
 MeshRenderer:
@@ -219,6 +227,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 4531480910169017468}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: ef280c69dddfa034d87f6504dccc42ba, type: 3}
@@ -266,14 +275,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: ef280c69dddfa034d87f6504dccc42ba, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 613d2df3aa7abc9428fd270f9a3998cf, type: 2}
+      objectReference: {fileID: 2100000, guid: 3a58d794fd276a643850b5ee67b6c271, type: 2}
     - target: {fileID: 919132149155446097, guid: ef280c69dddfa034d87f6504dccc42ba, type: 3}
       propertyPath: m_Name
       value: plate_lod0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef280c69dddfa034d87f6504dccc42ba, type: 3}
 --- !u!23 &2964098909673466711 stripped
 MeshRenderer:
@@ -290,6 +302,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 4531480910169017468}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 26d6c25ee69e3244c9618a5e05b931ea, type: 3}
@@ -337,14 +350,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 26d6c25ee69e3244c9618a5e05b931ea, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 613d2df3aa7abc9428fd270f9a3998cf, type: 2}
+      objectReference: {fileID: 2100000, guid: 3a58d794fd276a643850b5ee67b6c271, type: 2}
     - target: {fileID: 919132149155446097, guid: 26d6c25ee69e3244c9618a5e05b931ea, type: 3}
       propertyPath: m_Name
       value: plate_lod1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26d6c25ee69e3244c9618a5e05b931ea, type: 3}
 --- !u!23 &2964098909664493581 stripped
 MeshRenderer:
@@ -361,6 +377,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 4531480910169017468}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: c56ba892a8e82ab40aaaa41c49f46add, type: 3}
@@ -408,14 +425,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: c56ba892a8e82ab40aaaa41c49f46add, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 613d2df3aa7abc9428fd270f9a3998cf, type: 2}
+      objectReference: {fileID: 2100000, guid: 3a58d794fd276a643850b5ee67b6c271, type: 2}
     - target: {fileID: 919132149155446097, guid: c56ba892a8e82ab40aaaa41c49f46add, type: 3}
       propertyPath: m_Name
       value: plate_lod2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c56ba892a8e82ab40aaaa41c49f46add, type: 3}
 --- !u!23 &2964098909341329330 stripped
 MeshRenderer:

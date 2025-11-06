@@ -545,7 +545,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 079c048d0750a6341be30a2cc6a3cca2, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 2559687c6ab987d4a8dc48be973cacef, type: 2}
+      objectReference: {fileID: 2100000, guid: 00d4d96d1916f1e42bf3654e7b745a5b, type: 2}
     - target: {fileID: 919132149155446097, guid: 079c048d0750a6341be30a2cc6a3cca2, type: 3}
       propertyPath: m_Name
       value: ST_Stone7_Gold

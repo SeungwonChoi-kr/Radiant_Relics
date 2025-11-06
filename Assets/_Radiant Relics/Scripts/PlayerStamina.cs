@@ -34,7 +34,7 @@ public class PlayerStamina : MonoBehaviour
     private void HandleStamina()
     {
         // 1. 달리기 스테미너 감소
-        if (playerMovement.IsRunning)
+        if (playerMovement.isRunning)
         {
             currentStamina -= staminaDrainRate * Time.deltaTime;
             if (currentStamina <= 0f)

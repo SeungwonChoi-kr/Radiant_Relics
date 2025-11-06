@@ -25,8 +25,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("달리기 설정")]
     [Tooltip("달리기 기능 활성화 여부")]
     public bool enableRun = true;
-
-    private bool isRunning = false;
+    public bool isRunning = false;
 
     // 물 관련 변수
     [Header("물 설정")]

@@ -97,6 +97,10 @@ public class GameManager : MonoBehaviour
     [Tooltip("디버그 모드 활성화")]
     public bool debugMode = false;
 
+    public Transform goldMineLocation;
+    public Transform ironMineLocation;
+    public Transform silverMineLocation;
+
     void Awake()
     {
         // 싱글톤 패턴 구현

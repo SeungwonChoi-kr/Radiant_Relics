@@ -4500,6 +4500,39 @@ CapsuleCollider:
   m_Height: 9.15224
   m_Direction: 1
   m_Center: {x: 0, y: 4.57612, z: 0}
+--- !u!1 &198160606
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 198160607}
+  m_Layer: 0
+  m_Name: Water
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &198160607
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198160606}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 443301808}
+  - {fileID: 1111222894}
+  m_Father: {fileID: 2126690154}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &198241223
 GameObject:
   m_ObjectHideFlags: 0
@@ -13600,6 +13633,37 @@ CapsuleCollider:
   m_Height: 8.446973
   m_Direction: 1
   m_Center: {x: 0, y: 4.2234864, z: 0}
+--- !u!1 &605518694
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 605518695}
+  m_Layer: 10
+  m_Name: Gold Mine Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &605518695
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 605518694}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1444588241}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &608690579
 GameObject:
   m_ObjectHideFlags: 0
@@ -16243,7 +16307,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 2126690154}
+    m_TransformParent: {fileID: 198160607}
     m_Modifications:
     - target: {fileID: 1507636620937791777, guid: 7097ba7ba649e1f41bba232312bdcbd8, type: 3}
       propertyPath: m_LocalScale.x
@@ -21885,6 +21949,9 @@ MonoBehaviour:
   voiceVolume: 1
   mute: 0
   debugMode: 0
+  goldMineLocation: {fileID: 0}
+  ironMineLocation: {fileID: 0}
+  silverMineLocation: {fileID: 0}
 --- !u!1 &956522207
 GameObject:
   m_ObjectHideFlags: 0
@@ -25822,12 +25889,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1111222893}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2126690154}
+  m_Father: {fileID: 198160607}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1111222895
 BoxCollider:
@@ -26988,6 +27055,37 @@ CapsuleCollider:
   m_Height: 8.983554
   m_Direction: 1
   m_Center: {x: 0, y: 4.491777, z: 0}
+--- !u!1 &1195430209
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1195430210}
+  m_Layer: 11
+  m_Name: Iron Mine Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1195430210
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1195430209}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1444588241}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1198554494
 GameObject:
   m_ObjectHideFlags: 0
@@ -32127,6 +32225,40 @@ CapsuleCollider:
   m_Height: 9.994959
   m_Direction: 1
   m_Center: {x: 0, y: 4.9974794, z: 0}
+--- !u!1 &1444588240
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1444588241}
+  m_Layer: 0
+  m_Name: Mine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1444588241
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444588240}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 605518695}
+  - {fileID: 1195430210}
+  - {fileID: 1708887914}
+  m_Father: {fileID: 2126690154}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1449897512
 GameObject:
   m_ObjectHideFlags: 0
@@ -36151,9 +36283,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   enableRun: 1
+  isRunning: 0
   waterLayer: 4
   useInspectorStartXZ: 1
-  startX: 3
+  startX: 100
   startZ: 316
 --- !u!1 &1623101933
 GameObject:
@@ -36577,10 +36710,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResourceManager
   playerTransform: {fileID: 1620324349}
-  detectionRadius: 20
-  checkInterval: 0.5
   globalDiscoveryChance: 0.7
-  sourceMines: []
+  detectionRadius: 40
+  sourceMines:
+  - resourceName: Gold
+    mineLocation: {fileID: 605518695}
+    resourcePrefabs:
+    - {fileID: 8499978463484841759, guid: cf8d85edbec1dec4492ad9467a39d0e2, type: 3}
+    - {fileID: 460781864249090403, guid: 2296971890fe47d439f93593e914571f, type: 3}
+    - {fileID: 7350422974628563879, guid: bbd9456e87ebeec48bb1ceb72fd21f8f, type: 3}
+    - {fileID: 6394173946000050051, guid: fecb47b24decfef48a2087a58487d1ff, type: 3}
+    - {fileID: 5268223660325392095, guid: f50f3e8cb25c571468d23f6e91bd0202, type: 3}
+    - {fileID: 642403957567517259, guid: 2b1456f7b9686334aad227d8633d09ab, type: 3}
+    - {fileID: 9113612418513373106, guid: 990e808b12c5ae64fac6d7d2e5225262, type: 3}
+  - resourceName: Iron
+    mineLocation: {fileID: 1195430210}
+    resourcePrefabs:
+    - {fileID: 8499978463484841759, guid: f07e97a5eb3f0334889c46a3ed613867, type: 3}
+    - {fileID: 460781864249090403, guid: b2563ef5d003726489e86205ef7164ff, type: 3}
+    - {fileID: 7350422974628563879, guid: cf42e83350c387e48b475260bbc0fa88, type: 3}
+    - {fileID: 6394173946000050051, guid: 16b4b4b2f7bd7d54abea6fbb9d5895b7, type: 3}
+    - {fileID: 5268223660325392095, guid: 5f08e690076d2474c8adc6bcaee921a8, type: 3}
+    - {fileID: 642403957567517259, guid: 17687e8b87e18cd438482de9b8068024, type: 3}
+    - {fileID: 9113612418513373106, guid: ce83b9575723f294fad1e8bcd3aa9a3d, type: 3}
+  - resourceName: Silver
+    mineLocation: {fileID: 1708887914}
+    resourcePrefabs:
+    - {fileID: 8499978463484841759, guid: 3b618115dfe1f8248b39ff3c234eb025, type: 3}
+    - {fileID: 460781864249090403, guid: adcb89d2507694c4c93ed412e7719e07, type: 3}
+    - {fileID: 7350422974628563879, guid: b818cc709b1e0c64f8afc47692c0866c, type: 3}
+    - {fileID: 6394173946000050051, guid: d341537802a0a7749a584dad5b2c8bef, type: 3}
+    - {fileID: 5268223660325392095, guid: 1bb9d53da58683b4ea8c4d1e381ffbdc, type: 3}
+    - {fileID: 642403957567517259, guid: 6c23030896a4e744ab8874b45e4bea96, type: 3}
+    - {fileID: 9113612418513373106, guid: 66150e8b05e946b489348e0a66f6972c, type: 3}
   spawnPointPrefab: {fileID: 3407752023653694601, guid: f72e5881f8f595543baea1e158b1b257, type: 3}
   allTerrains:
   - {fileID: 656986361}
@@ -38296,6 +38458,37 @@ CapsuleCollider:
   m_Height: 9.498437
   m_Direction: 1
   m_Center: {x: 0, y: 4.7492185, z: 0}
+--- !u!1 &1708887913
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1708887914}
+  m_Layer: 12
+  m_Name: Silver Mine Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1708887914
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708887913}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1444588241}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1709502761
 GameObject:
   m_ObjectHideFlags: 0
@@ -46682,9 +46875,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1444588241}
   - {fileID: 542184081}
-  - {fileID: 443301808}
-  - {fileID: 1111222894}
+  - {fileID: 198160607}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2130778569

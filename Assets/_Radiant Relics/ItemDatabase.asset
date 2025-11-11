@@ -73,6 +73,55 @@ MonoBehaviour:
   m_EditorClassIdentifier: DevionGames.InventorySystem::DevionGames.InventorySystem.Configuration.Input
   unstackEvent: 3
   unstackKeyCode: 304
+--- !u!114 &-7199491372425512157
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a78acd5557204d499bcf3420fd4ee78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DevionGames.InventorySystem::DevionGames.InventorySystem.UsableItem
+  m_Id: c18460d6-4ad8-4ce5-999e-a10f0e79f449
+  m_ItemName: New Item
+  m_UseItemNameAsDisplayName: 1
+  m_DisplayName: New Item
+  m_Icon: {fileID: 0}
+  m_Prefab: {fileID: 0}
+  m_Description: 
+  m_Category: {fileID: -6706687112582032658}
+  m_IsSellable: 1
+  m_BuyPrice: 0
+  m_CanBuyBack: 1
+  m_BuyCurrency: {fileID: 5024041229951281058}
+  m_SellPrice: 0
+  m_SellCurrency: {fileID: 5024041229951281058}
+  m_Stack: 1
+  m_MaxStack: 1
+  m_IsDroppable: 1
+  m_DropSound: {fileID: 0}
+  m_OverridePrefab: {fileID: 0}
+  m_IsCraftable: 0
+  m_CraftingDuration: 2
+  m_UseCraftingSkill: 0
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: 0}
+  m_RemoveIngredientsWhenFailed: 0
+  m_MinCraftingSkillValue: 0
+  m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
+  ingredients: []
+  properties: []
+  m_UseCategoryCooldown: 1
+  m_Cooldown: 1
+  actions: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!114 &-6706687112582032658
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -310,9 +359,9 @@ MonoBehaviour:
   items:
   - {fileID: 1188888256393619165}
   - {fileID: -7237901741591898657}
-  - {fileID: 4367944086272512928}
   - {fileID: 1528725086405952213}
-  - {fileID: 996813673573174025}
+  - {fileID: 141343337059381891}
+  - {fileID: 4367944086272512928}
   currencies:
   - {fileID: 5024041229951281058}
   raritys: []
@@ -327,7 +376,7 @@ MonoBehaviour:
   - {fileID: -2335932706073132808}
   - {fileID: 2502100708860354697}
   - {fileID: -6427099786571891144}
---- !u!114 &996813673573174025
+--- !u!114 &141343337059381891
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -337,9 +386,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e14be5e3e6cf2204293682bf65bce5dc, type: 3}
-  m_Name: Dragon Raider
+  m_Name: Dragon Raider(Clone)
   m_EditorClassIdentifier: DevionGames.InventorySystem::DevionGames.InventorySystem.Item
-  m_Id: a50c8fef-fb6d-40b7-9597-6b6d7d204811
+  m_Id: c064de2f-c2d1-4eae-987c-f15be81ff1f5
   m_ItemName: Dragon Raider
   m_UseItemNameAsDisplayName: 1
   m_DisplayName: New Item

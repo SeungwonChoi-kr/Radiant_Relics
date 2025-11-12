@@ -21,7 +21,6 @@ public class PlayerStamina : MonoBehaviour
     void Start()
     {
         playerMovement = GetComponentInParent<PlayerMovement>();
-//        playerMovement = GetComponent<PlayerMovement>();
         currentStamina = maxStamina;
 
         if (playerMovement == null)
@@ -50,7 +49,7 @@ public class PlayerStamina : MonoBehaviour
         }
 
         // 1. 달리기 스테미너 감소
-        if (playerMovement.IsRunning)
+        if (playerMovement.isRunning)
         {
             float before = currentStamina;
             currentStamina -= staminaDrainRate * Time.deltaTime;

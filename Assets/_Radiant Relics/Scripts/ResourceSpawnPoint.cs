@@ -23,12 +23,12 @@ public class ResourceSpawnPoint : MonoBehaviour
         // 플레이어가 근처에 있을 때의 로직
         if (isPlayerNear)
         {
-            // 1. 처음 발견을 시도할 때 (상태가 Undiscovered일 때)
+            // 1. 처음 광물이 발견되기 직전일 때
             if (currentState == SpawnPointState.Undiscovered)
             {
-                AttemptDiscovery();
+                AttemptDiscovery(); // 상태를 Discovered와 Missed 중 하나로 설정
             }
-            // 2. 이미 발견했다가 멀어져서 대기(Standby) 중일 때
+            // 2. 이미 발견했던 광물에 다시 다가갔을 때
             else if (currentState == SpawnPointState.Standby)
             {
                 currentState = SpawnPointState.Discovered;
@@ -57,9 +57,15 @@ public class ResourceSpawnPoint : MonoBehaviour
             currentState = SpawnPointState.Discovered;
             // 자원을 실제로 생성합니다.
             GameObject resourceToSpawn = ResourceManager.Instance.GetResourceToSpawn(transform.position);
+
             if (resourceToSpawn != null)
             {
                 spawnedResource = Instantiate(resourceToSpawn, transform.position, Quaternion.identity, transform);
+
+                int layerIndex = LayerMask.NameToLayer("Metal");
+
+                SetLayerRecursively(spawnedResource.transform, layerIndex);
+
             }
         }
         else
@@ -91,7 +97,7 @@ public class ResourceSpawnPoint : MonoBehaviour
         currentState = SpawnPointState.Undiscovered;
     }
 
-    // ★★★ 변경된 부분: 새로운 기즈모 색상 규칙 적용 ★★★
+    // 구체 색상
     private void OnDrawGizmos()
     {
         switch (currentState)
@@ -118,5 +124,14 @@ public class ResourceSpawnPoint : MonoBehaviour
                 break;
         }
         Gizmos.DrawSphere(transform.position, 0.5f);
+    }
+
+    private void SetLayerRecursively(Transform target, int layer)
+    {
+        target.gameObject.layer = layer;
+        foreach (Transform child in target)
+        {
+            SetLayerRecursively(child, layer);
+        }
     }
 }

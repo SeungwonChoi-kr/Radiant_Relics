@@ -52,7 +52,11 @@ public class PlayerMovement : MonoBehaviour
         animator = transform.GetComponentInChildren<Animator>();
         playerCamera = Camera.main;
 
-        playerStamina = GetComponent<PlayerStamina>();
+        //playerStamina = GetComponent<PlayerStamina>();
+
+        playerStamina = GetComponentInChildren<PlayerStamina>();
+
+        Debug.Log(playerStamina != null ? "PlayerStamina 참조 OK" : "PlayerStamina 참조 없음");
 
         if (playerStamina == null)
         {
@@ -241,8 +245,12 @@ public class PlayerMovement : MonoBehaviour
         bool isPressingW = Input.GetAxisRaw("Vertical") > 0.1f;
         bool isPressingShift = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
 
+        // 기존 구조 유지
         isRunning = isPressingW && isPressingShift && groundedPlayer;
+
+        //Debug.Log($"W: {isPressingW}, Shift: {isPressingShift}, Grounded: {groundedPlayer}, IsRunning: {isRunning}");
     }
+
 
     // 점프 입력을 처리하는 함수
     private void HandleJumpInput()

@@ -127,7 +127,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: e1deea230f2f3ee4d950a69f1a61155e, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 54bed071290bb2d4baebbbead1c9e101, type: 2}
+      objectReference: {fileID: 2100000, guid: b3f816b7797e1d440957862d22fdee38, type: 2}
     - target: {fileID: 919132149155446097, guid: e1deea230f2f3ee4d950a69f1a61155e, type: 3}
       propertyPath: m_Name
       value: rock_lod0
@@ -202,7 +202,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 56d78b70146d7eb46ac0822a7d3476aa, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 54bed071290bb2d4baebbbead1c9e101, type: 2}
+      objectReference: {fileID: 2100000, guid: b3f816b7797e1d440957862d22fdee38, type: 2}
     - target: {fileID: 919132149155446097, guid: 56d78b70146d7eb46ac0822a7d3476aa, type: 3}
       propertyPath: m_Name
       value: rock_lod3
@@ -277,7 +277,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 8e066791dd088994db56ac39d88c79f0, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 54bed071290bb2d4baebbbead1c9e101, type: 2}
+      objectReference: {fileID: 2100000, guid: b3f816b7797e1d440957862d22fdee38, type: 2}
     - target: {fileID: 919132149155446097, guid: 8e066791dd088994db56ac39d88c79f0, type: 3}
       propertyPath: m_Name
       value: rock_lod1
@@ -352,7 +352,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: fd697e7f9cd01204ba504cc92d62b891, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 54bed071290bb2d4baebbbead1c9e101, type: 2}
+      objectReference: {fileID: 2100000, guid: b3f816b7797e1d440957862d22fdee38, type: 2}
     - target: {fileID: 919132149155446097, guid: fd697e7f9cd01204ba504cc92d62b891, type: 3}
       propertyPath: m_Name
       value: rock_lod4
@@ -427,7 +427,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 4da20bd6f2eb00d4084bcf04aa33c908, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 54bed071290bb2d4baebbbead1c9e101, type: 2}
+      objectReference: {fileID: 2100000, guid: b3f816b7797e1d440957862d22fdee38, type: 2}
     - target: {fileID: 919132149155446097, guid: 4da20bd6f2eb00d4084bcf04aa33c908, type: 3}
       propertyPath: m_Name
       value: rock_lod2

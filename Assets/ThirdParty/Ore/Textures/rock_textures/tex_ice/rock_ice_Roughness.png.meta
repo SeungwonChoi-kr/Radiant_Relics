@@ -115,3 +115,10 @@ TextureImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 244050
+  packageName: Stylized Rock Pack - 8 styles, 3 shapes, LODs, PBR
+  packageVersion: 
+  assetPath: Assets/ThirdParty/Ore/Textures/rock_textures/tex_ice/rock_ice_Roughness.png
+  uploadId: 0

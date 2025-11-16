@@ -55,7 +55,7 @@ public class PlayerStamina : MonoBehaviour
             currentStamina -= staminaDrainRate * Time.deltaTime;
             currentStamina = Mathf.Clamp(currentStamina, 0f, maxStamina);
 
-            Debug.Log($"[PlayerStamina] 달리는 중 → 스테미너 감소: {before:F2} → {currentStamina:F2}");
+            // Debug.Log($"[PlayerStamina] 달리는 중 → 스테미너 감소: {before:F2} → {currentStamina:F2}");
 
             if (currentStamina <= 0f)
             {
@@ -71,7 +71,7 @@ public class PlayerStamina : MonoBehaviour
             currentStamina += staminaRegenRate * Time.deltaTime;
             currentStamina = Mathf.Clamp(currentStamina, 0f, maxStamina);
 
-            Debug.Log($"[PlayerStamina] 회복 중: {before:F2} → {currentStamina:F2}");
+            // Debug.Log($"[PlayerStamina] 회복 중: {before:F2} → {currentStamina:F2}");
         }
     }
 
@@ -93,14 +93,14 @@ public class PlayerStamina : MonoBehaviour
         float before = currentStamina;
         currentStamina -= amount;
         currentStamina = Mathf.Clamp(currentStamina, 0f, maxStamina);
-        Debug.Log($"[PlayerStamina] 점프 스테미너 차감: {before:F2} → {currentStamina:F2}");
+        // Debug.Log($"[PlayerStamina] 점프 스테미너 차감: {before:F2} → {currentStamina:F2}");
     }
 
     // 외부에서 현재 스테미너 확인용
     public bool HasStamina(float amount)
     {
         bool result = currentStamina >= amount;
-        Debug.Log($"[PlayerStamina] 점프 가능 여부 확인: {result} (현재: {currentStamina:F2}, 필요: {amount})");
+        // Debug.Log($"[PlayerStamina] 점프 가능 여부 확인: {result} (현재: {currentStamina:F2}, 필요: {amount})");
         return result;
     }
 }

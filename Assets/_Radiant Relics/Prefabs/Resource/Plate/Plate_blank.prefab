@@ -127,7 +127,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: c56ba892a8e82ab40aaaa41c49f46add, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 3a58d794fd276a643850b5ee67b6c271, type: 2}
+      objectReference: {fileID: 2100000, guid: 613d2df3aa7abc9428fd270f9a3998cf, type: 2}
     - target: {fileID: 919132149155446097, guid: c56ba892a8e82ab40aaaa41c49f46add, type: 3}
       propertyPath: m_Name
       value: plate_lod2
@@ -202,7 +202,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: ef280c69dddfa034d87f6504dccc42ba, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 3a58d794fd276a643850b5ee67b6c271, type: 2}
+      objectReference: {fileID: 2100000, guid: 613d2df3aa7abc9428fd270f9a3998cf, type: 2}
     - target: {fileID: 919132149155446097, guid: ef280c69dddfa034d87f6504dccc42ba, type: 3}
       propertyPath: m_Name
       value: plate_lod0
@@ -277,7 +277,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 658215a83aae94c46a21910bd9ef5759, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 3a58d794fd276a643850b5ee67b6c271, type: 2}
+      objectReference: {fileID: 2100000, guid: 613d2df3aa7abc9428fd270f9a3998cf, type: 2}
     - target: {fileID: 919132149155446097, guid: 658215a83aae94c46a21910bd9ef5759, type: 3}
       propertyPath: m_Name
       value: plate_lod4
@@ -352,7 +352,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 26d6c25ee69e3244c9618a5e05b931ea, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 3a58d794fd276a643850b5ee67b6c271, type: 2}
+      objectReference: {fileID: 2100000, guid: 613d2df3aa7abc9428fd270f9a3998cf, type: 2}
     - target: {fileID: 919132149155446097, guid: 26d6c25ee69e3244c9618a5e05b931ea, type: 3}
       propertyPath: m_Name
       value: plate_lod1
@@ -427,7 +427,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 0e0a1291eb326d143aa46b11fafea792, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 3a58d794fd276a643850b5ee67b6c271, type: 2}
+      objectReference: {fileID: 2100000, guid: 613d2df3aa7abc9428fd270f9a3998cf, type: 2}
     - target: {fileID: 919132149155446097, guid: 0e0a1291eb326d143aa46b11fafea792, type: 3}
       propertyPath: m_Name
       value: plate_lod3

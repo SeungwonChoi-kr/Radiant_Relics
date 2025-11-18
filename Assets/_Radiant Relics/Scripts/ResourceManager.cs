@@ -29,7 +29,7 @@ public class ResourceManager : MonoBehaviour
     public GameObject spawnPointPrefab; // 기즈모 있는 프리팹 (Prefabs > Resource에 있음; 드래그 드랍으로 인스펙터 창에서 연결됨)
     public List<Terrain> allTerrains;
     public int numberOfSpawns = 300;
-    public float depthBelowSurface = -1.0f; // 땅에 처 박을 깊이
+    public float depthBelowSurface = 1.0f; // 땅에 처 박을 깊이
     public float minDistanceBetweenSpawns = 40.0f;  // 최소 여유 간격
     public float minAltitude = 30.0f;   // 최소 고도 (이 밑에는 안 생김; 바다 때문에)
 
@@ -160,7 +160,7 @@ public class ResourceManager : MonoBehaviour
                 if (terrainHeight < minAltitude)    // 만약 최소 고도보다 낮은 위치라면 패스
                     continue;
 
-                Vector3 potentialPosition = new Vector3(randomX, terrainHeight - depthBelowSurface, randomZ);   // 터레인에서 depthBelowSurface만큼 박은 위치 (x, y, z 좌표 모두 결정된 상태)
+                Vector3 potentialPosition = new Vector3(randomX, (terrainHeight - depthBelowSurface), randomZ);   // 터레인에서 depthBelowSurface만큼 박은 위치 (x, y, z 좌표 모두 결정된 상태)
 
                 bool isTooClose = placedPositions.Any(pos => Vector3.Distance(potentialPosition, pos) < minDistanceBetweenSpawns);  // 최소 간격보다 더 가까운 경우 isTooClose가 true로 활성화
                 if (!isTooClose)    // 충분히 거리가 있을 때만

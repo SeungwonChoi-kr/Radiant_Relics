@@ -135,7 +135,7 @@ MonoBehaviour:
   digRequiredHits: 5
   currentHits: 0
   isFullyDug: 0
-  maxRiseHeight: 2
+  maxRiseHeight: 0.9
   initialPosition: {x: 0, y: 0, z: 0}
 --- !u!1001 &108087973154966531
 PrefabInstance:

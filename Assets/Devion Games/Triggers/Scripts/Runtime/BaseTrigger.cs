@@ -319,8 +319,20 @@ namespace DevionGames
             SphereCollider sphereCollider = handlerGameObject.AddComponent<SphereCollider>();
             sphereCollider.isTrigger = true;
             sphereCollider.center = position;
+
             Vector3 scale = transform.lossyScale;
-            sphereCollider.radius = useDistance / Mathf.Max(scale.x, scale.y, scale.z);
+            float maxScale = Mathf.Max(scale.x, scale.y, scale.z);
+
+            // 스케일이 0에 근접하거나(Mathf.Epsilon), 0보다 작을 경우를 방어
+            if (maxScale <= Mathf.Epsilon)
+            {
+                // 스케일이 0일 때는 나누기를 하지 않고, useDistance를 그대로 넣거나 안전한 값(예: 1.0f)을 할당
+                sphereCollider.radius = useDistance;
+            }
+            else
+            {
+                sphereCollider.radius = useDistance / maxScale;
+            }
 
             Rigidbody rigidbody = GetComponent<Rigidbody>();
             if (rigidbody == null) {

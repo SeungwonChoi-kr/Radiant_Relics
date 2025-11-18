@@ -169,4 +169,6 @@ MonoBehaviour:
         keys: []
         values: []
   bookmarks: []
-  bookmarkedScenePaths: []
+  bookmarkedScenePaths:
+  - Assets/Scenes/MainScene/MainScene.unity
+  - Assets/Scenes/Inventory.unity

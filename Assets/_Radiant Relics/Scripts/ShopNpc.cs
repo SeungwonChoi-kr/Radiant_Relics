@@ -3,9 +3,6 @@ using TMPro; // UI를 쓴다면 필요
 
 public class ShopNpc : MonoBehaviour
 {
-    [Header("UI & Interaction")]
-    public GameObject UI_Message; // 'F키' UI 텍스트
-
     // 애니메이션 종료 후 위치 오차 보정을 위한 변수
     [HideInInspector]
     public Vector3 initialPosition; // 처음 위치
@@ -30,16 +27,6 @@ public class ShopNpc : MonoBehaviour
         // 시작과 동시에 위치와 방향을 저장
         initialPosition = transform.position;
         initialRotation = transform.rotation;
-
-        // 'F키' 상호작용 UI 끄기 (아직 가까이 안 갔기 때문에)
-        if (UI_Message != null)
-        {
-            UI_Message.SetActive(false);
-        }
-        else
-        {
-            // Debug.LogError("[ShopNPC] 'F키' 상호작용 UI 미할당");
-        }
     }
 
     void Update()
@@ -61,12 +48,6 @@ public class ShopNpc : MonoBehaviour
 
             // Animator의 'PlayerInRange' 값을 true로 설정
             animator.SetBool("PlayerInRange", true);
-
-            // 'F키' 상호작용 UI 켜기
-            if (UI_Message != null)
-            {
-                UI_Message.SetActive(true);
-            }
         }
     }
 
@@ -80,12 +61,6 @@ public class ShopNpc : MonoBehaviour
 
             // Animator에게 'PlayerInRange' 값을 false로 설정
             animator.SetBool("PlayerInRange", false);
-
-            // 'F키' 상호작용 UI 끄기
-            if (UI_Message != null)
-            {
-                UI_Message.SetActive(false);
-            }
         }
     }
 
@@ -94,16 +69,10 @@ public class ShopNpc : MonoBehaviour
     {
         Debug.Log("[ShopNPC] Interact (F key Pressed)");
 
-        int talkIndex = Random.Range(1, 3); // 1번과 2번 Talk 애니메이션 중 하나를 선택하기 위한 랜덤값
+        int talkIndex = Random.Range(1, 11); // 1번과 2번 Talk 애니메이션 중 하나를 선택하기 위한 랜덤값
 
-        animator.SetInteger("TalkIndex", talkIndex);    // 해당 값으로 애니메이션 분기
+        animator.SetInteger("TalkRandomIndex", talkIndex % 2 + 1);    // 해당 값으로 애니메이션 분기
         animator.SetTrigger("DoInteract");              // DoInteract도 있어야 분기가 되므로 Trigger 활성화
-
-        // 상호작용 중에는 UI 끄기
-        if (UI_Message != null)
-        {
-            UI_Message.SetActive(false);
-        }
     }
 
     // Animator에 'Apply Root Motion'이 체크되어 있다면 매 프레임마다 호출

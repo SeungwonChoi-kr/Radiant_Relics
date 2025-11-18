@@ -73,19 +73,31 @@ namespace DevionGames
 
 		private static bool AxisDefined (string axisName)
 		{
-			SerializedObject serializedObject = new SerializedObject (AssetDatabase.LoadAllAssetsAtPath ("ProjectSettings/InputManager.asset") [0]);
-			SerializedProperty axesProperty = serializedObject.FindProperty ("m_Axes");
+            SerializedObject serializedObject = new SerializedObject(AssetDatabase.LoadAllAssetsAtPath("ProjectSettings/InputManager.asset")[0]);
+            SerializedProperty axesProperty = serializedObject.FindProperty("m_Axes");
 
-			axesProperty.Next (true);
-			axesProperty.Next (true);
-			while (axesProperty.Next (false)) {
-				SerializedProperty axis = axesProperty.Copy ();
-				axis.Next (true);
-				if (axis.stringValue == axisName)
-					return true;
-			}
-			return false;
-		}
+            //axesProperty.Next(true);
+            //axesProperty.Next(true);
+            //while (axesProperty.Next(false))
+            //{
+            //    SerializedProperty axis = axesProperty.Copy();
+            //    axis.Next(true);
+            //    if (axis.stringValue == axisName)
+            //        return true;
+            //}
+            //return false;
+            for (int i = 0; i < axesProperty.arraySize; i++)
+            {
+                SerializedProperty axis = axesProperty.GetArrayElementAtIndex(i);
+                SerializedProperty nameProp = axis.FindPropertyRelative("m_Name");
+
+                if (nameProp != null && nameProp.stringValue == axisName)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
 
 		public enum AxisType
 		{

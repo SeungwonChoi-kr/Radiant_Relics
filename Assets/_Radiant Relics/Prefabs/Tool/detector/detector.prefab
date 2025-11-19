@@ -994,9 +994,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3654aa15d15e28c4e82cba71dcf30cec, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 727117964719558892}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3654aa15d15e28c4e82cba71dcf30cec, type: 3}
-      insertIndex: -1
       addedObject: {fileID: -4011892895718897324}
   m_SourcePrefab: {fileID: 100100000, guid: 3654aa15d15e28c4e82cba71dcf30cec, type: 3}
 --- !u!1 &4633542886826366396 stripped
@@ -1004,35 +1001,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3654aa15d15e28c4e82cba71dcf30cec, type: 3}
   m_PrefabInstance: {fileID: 5516011677811730669}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &727117964719558892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4633542886826366396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9bac1fc931bbe8418ebc62d680a3d59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MetalDetector
-  detectionRange: 20
-  metalLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  signalBars:
-  - {fileID: 936275275663328350}
-  - {fileID: 6416322421710821030}
-  - {fileID: 8716544799953819468}
-  - {fileID: 1648273787388751685}
-  - {fileID: 6825843961030685134}
-  - {fileID: 4225907573556091830}
-  - {fileID: 3567789214614557056}
-  - {fileID: 8119675513504537508}
-  - {fileID: 3296080663675181522}
-  beepAudio: {fileID: 8395100353434228708}
-  baseBeepInterval: 1.5
-  minBeepInterval: 0.4
 --- !u!114 &-4011892895718897324
 MonoBehaviour:
   m_ObjectHideFlags: 0

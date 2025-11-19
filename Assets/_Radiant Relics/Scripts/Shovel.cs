@@ -103,6 +103,7 @@ public class Shovel : MonoBehaviour
                 }
                 else
                 {
+                    resource.CollectItem();
                     Debug.Log("이미 다 캔 광물입니다.");
                 }
 

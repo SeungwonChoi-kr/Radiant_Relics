@@ -34873,6 +34873,11 @@ CapsuleCollider:
   m_Height: 9.481632
   m_Direction: 1
   m_Center: {x: 0, y: 4.740816, z: 0}
+--- !u!1 &1439862873 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 38432885477966607, guid: acb8c480173caf4469a4345315059aa1, type: 3}
+  m_PrefabInstance: {fileID: 1709605251}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1441349400
 GameObject:
   m_ObjectHideFlags: 0
@@ -42255,6 +42260,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 38432885477966607, guid: acb8c480173caf4469a4345315059aa1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1037595484895545568, guid: acb8c480173caf4469a4345315059aa1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -22.61558
@@ -42311,6 +42320,10 @@ PrefabInstance:
       propertyPath: staminaFillImage
       value: 
       objectReference: {fileID: 77001484}
+    - target: {fileID: 7727470073946913855, guid: acb8c480173caf4469a4345315059aa1, type: 3}
+      propertyPath: 'toolObjects.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1439862873}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 3238499564305143639, guid: acb8c480173caf4469a4345315059aa1, type: 3}
@@ -49802,7 +49815,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19697c7660106b64abad5a1f2519c21e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DayNightCycle
-  sunLight: {fileID: 0}
+  sunLight: {fileID: 2115450745}
   dayDuration: 30
   timeScale: 1
   daySkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}

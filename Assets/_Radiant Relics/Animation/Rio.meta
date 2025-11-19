@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/ThirdParty/Stars_Skybox.meta
+guid: 4e40310f9cb88494fbff6de6fe1d1532
+========
 guid: e2cb2817e6b866b41872e851c458900d
+>>>>>>>> backup/refactoring-worlds:Assets/_Radiant Relics/Animation/Rio.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

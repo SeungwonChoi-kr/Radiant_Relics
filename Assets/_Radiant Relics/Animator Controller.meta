@@ -1,9 +1,9 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Scenes/Psw_scenes.meta
-guid: 6cc5f64ff8562a84783dbee61e282f13
+<<<<<<<< HEAD:Assets/_Radiant Relics/Animation/Rio.meta
+guid: e2cb2817e6b866b41872e851c458900d
 ========
 guid: 67afbb89a5387594788373c023ec9fcf
->>>>>>>> develop:Assets/_Radiant Relics/Animator Controller.meta
+>>>>>>>> backup/refactoring-worlds:Assets/_Radiant Relics/Animator Controller.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

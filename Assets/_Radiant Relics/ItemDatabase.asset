@@ -16,49 +16,6 @@ MonoBehaviour:
   name: Tools
   m_EditorColor: {r: 0, g: 0, b: 0, a: 0}
   m_Cooldown: 1
---- !u!114 &-7237901741591898657
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e14be5e3e6cf2204293682bf65bce5dc, type: 3}
-  m_Name: silver
-  m_EditorClassIdentifier: DevionGames.InventorySystem::DevionGames.InventorySystem.Item
-  m_Id: 689c21fb-2d8c-4df0-bb92-f9e34a341c26
-  m_ItemName: silver
-  m_UseItemNameAsDisplayName: 1
-  m_DisplayName: New Item
-  m_Icon: {fileID: 21300000, guid: 4d9c85175f3dfa0408f65c38dbdf69b4, type: 3}
-  m_Prefab: {fileID: 0}
-  m_Description: 
-  m_Category: {fileID: -6706687112582032658}
-  m_IsSellable: 1
-  m_BuyPrice: 0
-  m_CanBuyBack: 1
-  m_BuyCurrency: {fileID: 5024041229951281058}
-  m_SellPrice: 0
-  m_SellCurrency: {fileID: 5024041229951281058}
-  m_Stack: 100
-  m_MaxStack: 100
-  m_IsDroppable: 0
-  m_DropSound: {fileID: 0}
-  m_OverridePrefab: {fileID: 0}
-  m_IsCraftable: 0
-  m_CraftingDuration: 2
-  m_UseCraftingSkill: 0
-  m_SkillWindow: Skills
-  m_CraftingSkill: {fileID: 0}
-  m_RemoveIngredientsWhenFailed: 0
-  m_MinCraftingSkillValue: 0
-  m_CraftingAnimatorState: Blacksmithy
-  m_CraftingModifier:
-    modifiers: []
-  ingredients: []
-  properties: []
 --- !u!114 &-7203596287750113755
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -155,6 +112,73 @@ MonoBehaviour:
   sellPriceTooltipName: Sell Price Tooltip
   stackName: Stack
   notificationName: Notification
+--- !u!114 &-5578804710601317914
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a78acd5557204d499bcf3420fd4ee78, type: 3}
+  m_Name: Iron
+  m_EditorClassIdentifier: DevionGames.InventorySystem::DevionGames.InventorySystem.UsableItem
+  m_Id: ac314c02-041c-4c57-83fe-7b5aa95bd71d
+  m_ItemName: Iron
+  m_UseItemNameAsDisplayName: 1
+  m_DisplayName: New Item
+  m_Icon: {fileID: 21300000, guid: 3e4fcc84a0ac95b429c56452575f6021, type: 3}
+  m_Prefab: {fileID: 2156568483165051735, guid: 3f7260757d6081849b3845978969901d, type: 3}
+  m_Description: 
+  m_Category: {fileID: -6706687112582032658}
+  m_IsSellable: 1
+  m_BuyPrice: 0
+  m_CanBuyBack: 1
+  m_BuyCurrency: {fileID: 5024041229951281058}
+  m_SellPrice: 0
+  m_SellCurrency: {fileID: 5024041229951281058}
+  m_Stack: 1
+  m_MaxStack: 1
+  m_IsDroppable: 0
+  m_DropSound: {fileID: 0}
+  m_OverridePrefab: {fileID: 0}
+  m_IsCraftable: 0
+  m_CraftingDuration: 2
+  m_UseCraftingSkill: 0
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: 0}
+  m_RemoveIngredientsWhenFailed: 0
+  m_MinCraftingSkillValue: 0
+  m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
+  ingredients: []
+  properties: []
+  m_UseCategoryCooldown: 1
+  m_Cooldown: 1
+  actions: []
+  references:
+    version: 2
+    RefIds: []
+--- !u!114 &-4189101796574138152
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28fccac83a2fa2245991bffe45a6cdd1, type: 3}
+  m_Name: Alchemy
+  m_EditorClassIdentifier: DevionGames.InventorySystem::DevionGames.InventorySystem.ItemGroup
+  m_GroupName: Alchemy
+  m_Items:
+  - {fileID: 3619592403296818942}
+  m_Amounts: 01000000
+  m_Modifiers:
+  - modifiers: []
 --- !u!114 &-2667587831364115863
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -357,11 +381,11 @@ MonoBehaviour:
   m_Name: ItemDatabase
   m_EditorClassIdentifier: DevionGames.InventorySystem::DevionGames.InventorySystem.ItemDatabase
   items:
-  - {fileID: 1188888256393619165}
-  - {fileID: -7237901741591898657}
-  - {fileID: 1528725086405952213}
-  - {fileID: 141343337059381891}
-  - {fileID: 4367944086272512928}
+  - {fileID: 3070773576733908153}
+  - {fileID: 3403466014044243614}
+  - {fileID: -5578804710601317914}
+  - {fileID: 3619592403296818942}
+  - {fileID: 3451520879177863632}
   currencies:
   - {fileID: 5024041229951281058}
   raritys: []
@@ -369,144 +393,14 @@ MonoBehaviour:
   - {fileID: -6706687112582032658}
   - {fileID: -8454552033633032625}
   equipments: []
-  itemGroups: []
+  itemGroups:
+  - {fileID: -4189101796574138152}
   settings:
   - {fileID: -2667587831364115863}
   - {fileID: -7203596287750113755}
   - {fileID: -2335932706073132808}
   - {fileID: 2502100708860354697}
   - {fileID: -6427099786571891144}
---- !u!114 &141343337059381891
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e14be5e3e6cf2204293682bf65bce5dc, type: 3}
-  m_Name: Dragon Raider(Clone)
-  m_EditorClassIdentifier: DevionGames.InventorySystem::DevionGames.InventorySystem.Item
-  m_Id: c064de2f-c2d1-4eae-987c-f15be81ff1f5
-  m_ItemName: Dragon Raider
-  m_UseItemNameAsDisplayName: 1
-  m_DisplayName: New Item
-  m_Icon: {fileID: 21300000, guid: f397df8f642d4594ebf9995bea62e308, type: 3}
-  m_Prefab: {fileID: 0}
-  m_Description: 
-  m_Category: {fileID: -8454552033633032625}
-  m_IsSellable: 1
-  m_BuyPrice: 0
-  m_CanBuyBack: 1
-  m_BuyCurrency: {fileID: 5024041229951281058}
-  m_SellPrice: 0
-  m_SellCurrency: {fileID: 5024041229951281058}
-  m_Stack: 1
-  m_MaxStack: 1
-  m_IsDroppable: 0
-  m_DropSound: {fileID: 0}
-  m_OverridePrefab: {fileID: 0}
-  m_IsCraftable: 1
-  m_CraftingDuration: 2
-  m_UseCraftingSkill: 0
-  m_SkillWindow: Skills
-  m_CraftingSkill: {fileID: 0}
-  m_RemoveIngredientsWhenFailed: 0
-  m_MinCraftingSkillValue: 0
-  m_CraftingAnimatorState: Blacksmithy
-  m_CraftingModifier:
-    modifiers: []
-  ingredients:
-  - item: {fileID: 1528725086405952213}
-    amount: 1
-  properties: []
---- !u!114 &1188888256393619165
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e14be5e3e6cf2204293682bf65bce5dc, type: 3}
-  m_Name: gold
-  m_EditorClassIdentifier: DevionGames.InventorySystem::DevionGames.InventorySystem.Item
-  m_Id: 6eac0922-5d3f-4c28-b3ff-2e62fdd371f0
-  m_ItemName: gold
-  m_UseItemNameAsDisplayName: 1
-  m_DisplayName: New Item
-  m_Icon: {fileID: 21300000, guid: 1da9f2b04608b044eb7f66ef739e8303, type: 3}
-  m_Prefab: {fileID: 0}
-  m_Description: gold
-  m_Category: {fileID: -6706687112582032658}
-  m_IsSellable: 1
-  m_BuyPrice: 0
-  m_CanBuyBack: 1
-  m_BuyCurrency: {fileID: 5024041229951281058}
-  m_SellPrice: 0
-  m_SellCurrency: {fileID: 5024041229951281058}
-  m_Stack: 100
-  m_MaxStack: 100
-  m_IsDroppable: 0
-  m_DropSound: {fileID: 0}
-  m_OverridePrefab: {fileID: 0}
-  m_IsCraftable: 0
-  m_CraftingDuration: 2
-  m_UseCraftingSkill: 0
-  m_SkillWindow: Skills
-  m_CraftingSkill: {fileID: 0}
-  m_RemoveIngredientsWhenFailed: 0
-  m_MinCraftingSkillValue: 0
-  m_CraftingAnimatorState: Blacksmithy
-  m_CraftingModifier:
-    modifiers: []
-  ingredients: []
-  properties: []
---- !u!114 &1528725086405952213
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e14be5e3e6cf2204293682bf65bce5dc, type: 3}
-  m_Name: relics
-  m_EditorClassIdentifier: DevionGames.InventorySystem::DevionGames.InventorySystem.Item
-  m_Id: 3c7eb6c9-8ba8-4d16-a596-382fb8675835
-  m_ItemName: relics
-  m_UseItemNameAsDisplayName: 1
-  m_DisplayName: New Item
-  m_Icon: {fileID: 21300000, guid: 5216e79063450d447b0e08e05d5ddab5, type: 3}
-  m_Prefab: {fileID: 0}
-  m_Description: 
-  m_Category: {fileID: -6706687112582032658}
-  m_IsSellable: 1
-  m_BuyPrice: 0
-  m_CanBuyBack: 1
-  m_BuyCurrency: {fileID: 5024041229951281058}
-  m_SellPrice: 0
-  m_SellCurrency: {fileID: 5024041229951281058}
-  m_Stack: 100
-  m_MaxStack: 100
-  m_IsDroppable: 0
-  m_DropSound: {fileID: 0}
-  m_OverridePrefab: {fileID: 0}
-  m_IsCraftable: 0
-  m_CraftingDuration: 2
-  m_UseCraftingSkill: 0
-  m_SkillWindow: Skills
-  m_CraftingSkill: {fileID: 0}
-  m_RemoveIngredientsWhenFailed: 0
-  m_MinCraftingSkillValue: 0
-  m_CraftingAnimatorState: Blacksmithy
-  m_CraftingModifier:
-    modifiers: []
-  ingredients: []
-  properties: []
 --- !u!114 &2502100708860354697
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -523,7 +417,7 @@ MonoBehaviour:
   savingKey: Player
   savingRate: 60
   provider: 0
---- !u!114 &4367944086272512928
+--- !u!114 &3070773576733908153
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -532,15 +426,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e14be5e3e6cf2204293682bf65bce5dc, type: 3}
-  m_Name: iron
-  m_EditorClassIdentifier: DevionGames.InventorySystem::DevionGames.InventorySystem.Item
-  m_Id: c400b43a-5ab8-475c-ad8f-0029a1829c7b
-  m_ItemName: iron
+  m_Script: {fileID: 11500000, guid: 4a78acd5557204d499bcf3420fd4ee78, type: 3}
+  m_Name: Gold
+  m_EditorClassIdentifier: DevionGames.InventorySystem::DevionGames.InventorySystem.UsableItem
+  m_Id: 25fa0819-058b-48cb-8445-1fcb5daf9e14
+  m_ItemName: Gold
   m_UseItemNameAsDisplayName: 1
   m_DisplayName: New Item
-  m_Icon: {fileID: 21300000, guid: 3e4fcc84a0ac95b429c56452575f6021, type: 3}
-  m_Prefab: {fileID: 0}
+  m_Icon: {fileID: 21300000, guid: 1da9f2b04608b044eb7f66ef739e8303, type: 3}
+  m_Prefab: {fileID: 6504725494259994801, guid: 9d0cf4536e2e08246ae4cf5eb9d9ee77, type: 3}
   m_Description: 
   m_Category: {fileID: -6706687112582032658}
   m_IsSellable: 1
@@ -566,6 +460,163 @@ MonoBehaviour:
     modifiers: []
   ingredients: []
   properties: []
+  m_UseCategoryCooldown: 1
+  m_Cooldown: 1
+  actions: []
+  references:
+    version: 2
+    RefIds: []
+--- !u!114 &3403466014044243614
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a78acd5557204d499bcf3420fd4ee78, type: 3}
+  m_Name: Silver
+  m_EditorClassIdentifier: DevionGames.InventorySystem::DevionGames.InventorySystem.UsableItem
+  m_Id: f4dacce5-c6a6-40dd-b1fa-e9d1c6533d67
+  m_ItemName: Silver
+  m_UseItemNameAsDisplayName: 1
+  m_DisplayName: New Item
+  m_Icon: {fileID: 21300000, guid: 4d9c85175f3dfa0408f65c38dbdf69b4, type: 3}
+  m_Prefab: {fileID: 7851437992630268516, guid: dd163a7f8691ed04e97dd2b7d565fb8e, type: 3}
+  m_Description: 
+  m_Category: {fileID: -6706687112582032658}
+  m_IsSellable: 1
+  m_BuyPrice: 0
+  m_CanBuyBack: 1
+  m_BuyCurrency: {fileID: 5024041229951281058}
+  m_SellPrice: 0
+  m_SellCurrency: {fileID: 5024041229951281058}
+  m_Stack: 100
+  m_MaxStack: 100
+  m_IsDroppable: 0
+  m_DropSound: {fileID: 0}
+  m_OverridePrefab: {fileID: 0}
+  m_IsCraftable: 0
+  m_CraftingDuration: 2
+  m_UseCraftingSkill: 0
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: 0}
+  m_RemoveIngredientsWhenFailed: 0
+  m_MinCraftingSkillValue: 0
+  m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
+  ingredients: []
+  properties: []
+  m_UseCategoryCooldown: 1
+  m_Cooldown: 1
+  actions: []
+  references:
+    version: 2
+    RefIds: []
+--- !u!114 &3451520879177863632
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e14be5e3e6cf2204293682bf65bce5dc, type: 3}
+  m_Name: relics
+  m_EditorClassIdentifier: DevionGames.InventorySystem::DevionGames.InventorySystem.Item
+  m_Id: 93f57acc-b7e4-442c-898b-99f7a8ab4b4f
+  m_ItemName: relics
+  m_UseItemNameAsDisplayName: 1
+  m_DisplayName: New Item
+  m_Icon: {fileID: 21300000, guid: 5216e79063450d447b0e08e05d5ddab5, type: 3}
+  m_Prefab: {fileID: 8703450225831881032, guid: 6e384cd693296b544b8bf7ce6d0b86a5, type: 3}
+  m_Description: 
+  m_Category: {fileID: -6706687112582032658}
+  m_IsSellable: 1
+  m_BuyPrice: 0
+  m_CanBuyBack: 1
+  m_BuyCurrency: {fileID: 5024041229951281058}
+  m_SellPrice: 0
+  m_SellCurrency: {fileID: 5024041229951281058}
+  m_Stack: 100
+  m_MaxStack: 100
+  m_IsDroppable: 0
+  m_DropSound: {fileID: 0}
+  m_OverridePrefab: {fileID: 0}
+  m_IsCraftable: 1
+  m_CraftingDuration: 2
+  m_UseCraftingSkill: 0
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: 0}
+  m_RemoveIngredientsWhenFailed: 0
+  m_MinCraftingSkillValue: 0
+  m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
+  ingredients: []
+  properties: []
+--- !u!114 &3619592403296818942
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a78acd5557204d499bcf3420fd4ee78, type: 3}
+  m_Name: Dragon Raider
+  m_EditorClassIdentifier: DevionGames.InventorySystem::DevionGames.InventorySystem.UsableItem
+  m_Id: 126352ad-ff22-4317-bd4d-f60e8afb454a
+  m_ItemName: Dragon Raider
+  m_UseItemNameAsDisplayName: 1
+  m_DisplayName: New Item
+  m_Icon: {fileID: 21300000, guid: f397df8f642d4594ebf9995bea62e308, type: 3}
+  m_Prefab: {fileID: 0}
+  m_Description: 
+  m_Category: {fileID: -8454552033633032625}
+  m_IsSellable: 1
+  m_BuyPrice: 0
+  m_CanBuyBack: 1
+  m_BuyCurrency: {fileID: 5024041229951281058}
+  m_SellPrice: 0
+  m_SellCurrency: {fileID: 5024041229951281058}
+  m_Stack: 100
+  m_MaxStack: 100
+  m_IsDroppable: 1
+  m_DropSound: {fileID: 0}
+  m_OverridePrefab: {fileID: 0}
+  m_IsCraftable: 1
+  m_CraftingDuration: 2
+  m_UseCraftingSkill: 0
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: 0}
+  m_RemoveIngredientsWhenFailed: 0
+  m_MinCraftingSkillValue: 0
+  m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
+  ingredients:
+  - item: {fileID: 3451520879177863632}
+    amount: 1
+  properties: []
+  m_UseCategoryCooldown: 1
+  m_Cooldown: 1
+  actions:
+  - rid: 772561250784116946
+  references:
+    version: 2
+    RefIds:
+    - rid: 772561250784116946
+      type: {class: ShowWindow, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: DevionGames.InventorySystem.ShowWindow
+        m_Enabled: 1
+        m_WindowName: Alchemy
+        m_DestroyWhenEmpty: 0
 --- !u!114 &5024041229951281058
 MonoBehaviour:
   m_ObjectHideFlags: 1

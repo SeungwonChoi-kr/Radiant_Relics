@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 83dec1637b87c7845bd10f3c0a17bd88
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 312995
+  packageName: Archaeological Adventurer Tools Pack
+  packageVersion: 1.0
+  assetPath: Assets/_Radiant Relics/Prefabs/Tool/shovel/PolyRonin/Archaeological
+    Adventurer Tools Pack/Materials/adventurer-tools-colors.mat
+  uploadId: 737872

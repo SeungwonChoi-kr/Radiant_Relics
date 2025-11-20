@@ -24,6 +24,7 @@ public class MetalDetector : MonoBehaviour
     private float nextBeepTime = 0f; // 다음 경고음이 울릴 시간
     private Transform targetMetal;   // 현재 감지된 가장 가까운 금속 오브젝트의 Transform
 
+    private DiggableResource currentDiggableResource; // 현재 탐지된 DiggableResource 참조
     // 매 프레임마다 호출되는 Unity 생명주기 메서드
     void Update()
     {
@@ -44,6 +45,17 @@ public class MetalDetector : MonoBehaviour
             UpdateSignalBars(normalized);
             // 정규화된 값(강도)을 기반으로 경고음 처리
             HandleBeepSound(normalized);
+
+            //탐지 여부 확인
+            if (currentDiggableResource != null)
+            {
+                // UI 7번(인덱스 7)이 초록색이고 아직 캘 수 있는 상태가 아닐 때만 true로 설정합니다.
+                if (!currentDiggableResource.isCurrentlyDiggable && (signalBars[7].color == Color.green))
+                {
+                    Debug.Log($"자원 탐지 완료! ({targetMetal.name}) 이제 삽질 가능합니다.");
+                    currentDiggableResource.SetDiggableStatus(true);
+                }
+            }
         }
         else // 감지된 금속이 없다면
         {
@@ -61,7 +73,7 @@ public class MetalDetector : MonoBehaviour
         Collider[] hits = Physics.OverlapSphere(transform.position, detectionRange, metalLayer);
 
         float closest = Mathf.Infinity; // 가장 가까운 거리를 저장할 변수 (초기값은 무한대)
-        targetMetal = null; // 매번 탐지 시작 전 타겟을 초기화
+        Transform newTargetMetal = null;
 
         // 감지된 모든 콜라이더를 순회
         foreach (Collider c in hits)
@@ -73,11 +85,16 @@ public class MetalDetector : MonoBehaviour
             if (dist < closest)
             {
                 closest = dist;          // 가장 가까운 거리 갱신
-                targetMetal = c.transform; // 가장 가까운 물체를 타겟으로 설정
+                newTargetMetal = c.transform; // 가장 가까운 물체를 타겟으로 설정
             }
         }
-    }
 
+        if (targetMetal != newTargetMetal)
+        {
+            targetMetal = newTargetMetal;
+            currentDiggableResource = targetMetal != null ? targetMetal.GetComponent<DiggableResource>() : null;
+        }
+    }
     /// <summary>
     /// 신호 강도(intensity)에 따라 UI 신호 막대의 색상을 업데이트합니다.
     /// </summary>
@@ -103,9 +120,6 @@ public class MetalDetector : MonoBehaviour
             {
                 signalBars[i].color = new Color(0, 0.3f, 0); // 비활성 색상 (어두운 초록색)으로 변경
             }
-
-            // 위 7줄의 if-else 구문은 아래 한 줄의 삼항 연산자로 대체할 수 있습니다:
-            // signalBars[i].color = i < activeBars ? Color.green : new Color(0, 0.3f, 0);
         }
     }
 

@@ -60,6 +60,9 @@ public class GameManager : MonoBehaviour
     [Range(0.1f, 5.0f)]
     public float timeScale = 1.0f;
 
+    [Tooltip("현재 밤인지 여부")]
+    public bool isNight = false;
+
     [Header("UI 설정")]
     [Tooltip("UI 애니메이션 속도")]
     [Range(0.1f, 3.0f)]
@@ -72,6 +75,9 @@ public class GameManager : MonoBehaviour
     [Tooltip("UI 스케일")]
     [Range(0.5f, 2.0f)]
     public float uiScale = 1.0f;
+
+    [Tooltip("현재 마우스 커서 활성화 여부 (인벤토리/거래용)")]
+    public bool isMouseOn = false;
 
     [Header("오디오 설정")]
     [Tooltip("마스터 볼륨")]
@@ -93,14 +99,6 @@ public class GameManager : MonoBehaviour
     [Tooltip("음소거")]
     public bool mute = false;
 
-    [Header("디버그 설정")]
-    [Tooltip("디버그 모드 활성화")]
-    public bool debugMode = false;
-
-    public Transform goldMineLocation;
-    public Transform ironMineLocation;
-    public Transform silverMineLocation;
-
     void Awake()
     {
         // 싱글톤 패턴 구현
@@ -119,6 +117,8 @@ public class GameManager : MonoBehaviour
     {
         // ResourceManager에게 스폰 포인트를 생성하라고 명령합니다.
         ResourceManager.Instance.GenerateSpawnPoints();
+
+        SetCursorState(false);  // 시작할 때 마우스 커서 비활성화
     }
 
     void Update()
@@ -128,6 +128,13 @@ public class GameManager : MonoBehaviour
 
         // 오디오 볼륨 적용
         ApplyAudioSettings();
+
+
+        // 디버깅용
+        if (Input.GetKeyDown(KeyCode.LeftAlt))
+        {
+            SetCursorState(!isMouseOn);
+        }
     }
 
     // 오디오 설정을 실제로 적용하는 메서드
@@ -205,6 +212,22 @@ public class GameManager : MonoBehaviour
         uiScale = Mathf.Clamp(value, 0.5f, 2.0f);
     }
 
+    public void SetCursorState(bool isOn)
+    {
+        isMouseOn = isOn;
+
+        if (isOn)
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+        else
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+    }
+
     // 오디오 설정 메서드들
     public void SetMasterVolume(float value)
     {
@@ -248,6 +271,5 @@ public class GameManager : MonoBehaviour
         sfxVolume = 0.9f;
         voiceVolume = 1.0f;
         mute = false;
-        debugMode = false;
     }
 }

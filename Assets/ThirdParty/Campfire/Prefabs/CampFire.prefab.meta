@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 459779eb9dd936642b9c14295e40ccee
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 322112
+  packageName: 'Stylised Reality: Campfire'
+  packageVersion: 1.1
+  assetPath: Assets/ThirdParty/Campfire/Prefabs/CampFire.prefab
+  uploadId: 769983

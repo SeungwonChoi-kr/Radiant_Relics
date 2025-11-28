@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 70482b15f0d85914eb52f732244c5ec4
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 322112
+  packageName: 'Stylised Reality: Campfire'
+  packageVersion: 1.1
+  assetPath: Assets/ThirdParty/Campfire/Prefabs/Tent.prefab
+  uploadId: 769983

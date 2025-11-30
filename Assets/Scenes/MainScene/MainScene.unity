@@ -17828,6 +17828,28 @@ CapsuleCollider:
   m_Height: 8.70289
   m_Direction: 1
   m_Center: {x: 0, y: 4.351445, z: 0}
+--- !u!1 &730685158 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7054687465761736342, guid: acb8c480173caf4469a4345315059aa1, type: 3}
+  m_PrefabInstance: {fileID: 1709605251}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &730685164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730685158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c914d4c161841f54d8e727051ce62106, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerPickUp
+  interactDistance: 3
+  pickupLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  handObject: {fileID: 1101314667}
 --- !u!1 &730845487
 GameObject:
   m_ObjectHideFlags: 0
@@ -26866,6 +26888,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 7.5, y: 1, z: 12.5}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1101314667 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8789806036228517790, guid: acb8c480173caf4469a4345315059aa1, type: 3}
+  m_PrefabInstance: {fileID: 1709605251}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1101886842
 GameObject:
   m_ObjectHideFlags: 0
@@ -42723,7 +42750,10 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 3238499564305143639, guid: acb8c480173caf4469a4345315059aa1, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7054687465761736342, guid: acb8c480173caf4469a4345315059aa1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 730685164}
   m_SourcePrefab: {fileID: 100100000, guid: acb8c480173caf4469a4345315059aa1, type: 3}
 --- !u!1 &1710461470
 GameObject:
@@ -55586,9 +55616,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GodWakeUp
   animator: {fileID: 6754513289898658555}
-  standUpTrigger: doStandUp
-  standUpDuration: 1
-  targetDestination: {fileID: 4998419}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

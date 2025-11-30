@@ -137,6 +137,10 @@ MonoBehaviour:
   isFullyDug: 0
   maxRiseHeight: 0.9
   initialPosition: {x: 0, y: 0, z: 0}
+  dropItemPrefab: {fileID: 2517374325388665725, guid: 54c39c907da2ce246b6ec494b7a3ccc2, type: 3}
+  minDropCount: 3
+  maxDropCount: 5
+  popForce: 5
 --- !u!1001 &108087973154966531
 PrefabInstance:
   m_ObjectHideFlags: 0

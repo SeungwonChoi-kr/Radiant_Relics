@@ -115,7 +115,7 @@ public class Shovel : MonoBehaviour
         if (!resourceFound)
         {
             // 정확한 위치에 스폰 포인트가 없어 땅파기 불발
-            Debug.Log("땅파기 불발: 이 위치에는 광물이 묻혀 있지 않습니다.");
+            Debug.Log("땅파기 불발: 이 위치에는 광물이 묻혀 있지 않습니다.");    // 버그 있음: 분명 자원 프리팹 묻혀있는 거 확인했는데 안 파짐
         }
     }
     private void PlayDigSound()

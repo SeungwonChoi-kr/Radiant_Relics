@@ -9,49 +9,91 @@ public class DiggableResource : MonoBehaviour
 
     [Header("Animation & Rewards")]
     public float maxRiseHeight = 2f; // 광물이 땅에서 최대로 올라올 높이
+    [HideInInspector] public Vector3 initialPosition;   // 광물이 솟아나기 시작할 기준 위치
 
-    // 광물이 솟아나기 시작할 기준 위치
-    [HideInInspector] public Vector3 initialPosition;
+    [Header("Drop Items")]
+    [Tooltip("Resource > Plate 프리팹들")]
+    public GameObject dropItemPrefab;   // 아직 뭘 드랍할지는 연결 안 됨
 
-    [Tooltip("금속 탐지기로부터 완전히 감지되어 현재 삽질 가능한 상태")]
+    public int minDropCount = 3;
+    public int maxDropCount = 5;    // 이건 탐지기 레벨에 따라 바뀌도록 탐지기의 변수를 가져와야 함
+
+    public float popForce = 3.0f;   // 퐁 튀어나오는 힘
     public bool isCurrentlyDiggable { get; private set; } = false;
 
-    // 이 스크립트가 붙은 GameObject의 Transform을 직접 사용합니다.
+
+
     void Start()
     {
         initialPosition = this.transform.localPosition;
     }
+
     public void SetDiggableStatus(bool status)
     {
         isCurrentlyDiggable = status;
     }
 
-    // 삽질 이벤트가 발생할 때마다 호출됨 (Shovel.cs에서 호출됨)
+    // Shovel.cs에서 삽질 이벤트가 발생할 때마다 호출됨
     public void DigHit()
     {
         if (isFullyDug) return;
 
         currentHits++;
 
-        // 2. 광물이 조금씩 올라오는 로직
+        // 광물이 조금씩 올라오는 로직
         float progress = (float)currentHits / digRequiredHits;
         float currentHeight = progress * maxRiseHeight;
-
-        // 광물 오브젝트의 로컬 위치를 업데이트합니다.
-        // Start()에서 설정된 initialPosition을 기준으로 위로 올라갑니다.
-        this.transform.localPosition = initialPosition + Vector3.up * currentHeight;
+        this.transform.localPosition = initialPosition + Vector3.up * currentHeight;    // 수직 위로 조금씩 위치 이동
 
         if (currentHits >= digRequiredHits)
         {
             isFullyDug = true;
-            Debug.Log("광물 채굴 완료! 아이템을 수거할 수 있습니다.");
-            OnDigComplete();
+
+            BreakAndDropItem();
         }
     }
 
-    private void OnDigComplete()
+    private void BreakAndDropItem()
     {
-        // 채굴 완료 시 실행되는 이벤트 (예: 이펙트)
+        ResourceSpawnPoint parentPoint = GetComponentInParent<ResourceSpawnPoint>();
+        if (parentPoint != null)
+        {
+            parentPoint.OnMined();  // 자기 부모 오브젝트인 ResourceSpawnPoint의 OnMined 함수를 호출하여 검은색으로 변경 & 자원 오브젝트 파괴
+        }
+        else
+        {
+            Debug.LogError("[DiggableResource] 부모가 없는 오브젝트 채굴?");
+            return;
+        }
+
+        if (dropItemPrefab != null)
+        {
+            int dropCount = Random.Range(minDropCount, maxDropCount + 1);
+
+            Transform parentTransfrom = parentPoint.transform;
+
+            for (int i = 0; i < dropCount; i++)
+            {
+                Vector3 randomPos = Random.insideUnitSphere * 0.5f;
+                randomPos.y = 0.5f;
+
+                GameObject droppedItem = Instantiate(dropItemPrefab, transform.position + randomPos, Quaternion.identity, parentTransfrom);
+                droppedItem.transform.localScale = Vector3.one * 0.08f;
+
+                Rigidbody rigidbody = droppedItem.GetComponent<Rigidbody>();
+                if (rigidbody != null)
+                {
+                    Vector3 forceDirection = (Vector3.up + Random.insideUnitSphere).normalized;
+                    rigidbody.AddForce(forceDirection * popForce, ForceMode.Impulse);
+                }
+            }
+        }
+        else
+        {
+            Debug.LogError("[DiggableResource] 드랍할 오브젝트가 할당되지 않음");
+        }
+
+        Destroy(this.gameObject);
     }
 
     // 플레이어가 채굴 완료된 광물과 상호작용하여 아이템을 얻는 함수

@@ -10,7 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1815682980445442185}
   - component: {fileID: 6632053144824101061}
-  m_Layer: 0
+  - component: {fileID: -7488654587348574177}
+  - component: {fileID: 977176111575076987}
+  - component: {fileID: 9151623057649785827}
+  m_Layer: 8
   m_Name: Plate_white
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,6 +75,67 @@ LODGroup:
     renderers:
     - renderer: {fileID: 2786987434380266100}
   m_Enabled: 1
+--- !u!54 &-7488654587348574177
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2517374325388665725}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
+--- !u!65 &977176111575076987
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2517374325388665725}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &9151623057649785827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2517374325388665725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7aaa95d78956cb04998ad642f5496e3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickupItem
+  itemName: Silver
 --- !u!1001 &185662205221037324
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -131,6 +195,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ef280c69dddfa034d87f6504dccc42ba, type: 3}
       propertyPath: m_Name
       value: plate_lod0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef280c69dddfa034d87f6504dccc42ba, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -207,6 +275,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: plate_lod1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 26d6c25ee69e3244c9618a5e05b931ea, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -281,6 +353,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c56ba892a8e82ab40aaaa41c49f46add, type: 3}
       propertyPath: m_Name
       value: plate_lod2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c56ba892a8e82ab40aaaa41c49f46add, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -357,6 +433,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: plate_lod4
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 658215a83aae94c46a21910bd9ef5759, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -431,6 +511,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0e0a1291eb326d143aa46b11fafea792, type: 3}
       propertyPath: m_Name
       value: plate_lod3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e0a1291eb326d143aa46b11fafea792, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

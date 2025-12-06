@@ -204,6 +204,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: adc7abeeead962149883a3842bc411b5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3332343124227870680}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: adc7abeeead962149883a3842bc411b5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7682491398919318454}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: adc7abeeead962149883a3842bc411b5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6843287499371634584}
   m_SourcePrefab: {fileID: 100100000, guid: adc7abeeead962149883a3842bc411b5, type: 3}
 --- !u!1 &7727567350852750599 stripped
 GameObject:
@@ -229,8 +235,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.4, y: 1, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 2.7}
+  m_Size: {x: 3, y: 1, z: 1.2}
+  m_Center: {x: 0, y: 0.5, z: 2.6}
 --- !u!114 &2273609461301095896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,7 +249,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edb6c1698313651419fa1225916c184d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShopNPC
-  UI_Message: {fileID: 0}
   initialPosition: {x: 0, y: 0, z: 0}
   initialRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &3605647235918226721
@@ -266,7 +271,7 @@ MonoBehaviour:
         - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: DevionGames.InventorySystem.CraftingTrigger,
             DevionGames.InventorySystem
-          m_MethodName: StartUse
+          m_MethodName: 
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -276,12 +281,54 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 11500000, guid: b71d3868490ce894cb0dfe20db352ae9, type: 3}
+          m_TargetAssemblyTypeName: UnityEditor.MonoScript, UnityEditor.CoreModule
+          m_MethodName: set_name
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: MouseLockTrue
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: OnWentOutOfRange
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: DevionGames.InventorySystem.CraftingTrigger,
+            DevionGames.InventorySystem
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 11500000, guid: b71d3868490ce894cb0dfe20db352ae9, type: 3}
+          m_TargetAssemblyTypeName: UnityEditor.MonoScript, UnityEditor.CoreModule
+          m_MethodName: set_name
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: MouseLockFalse
+            m_BoolArgument: 0
+          m_CallState: 2
   useDistance: 3
   triggerType: 8
   key: 102
   actionTemplate: {fileID: 0}
   actions:
   - rid: 772561250784116952
+  - rid: 4236597672860450892
   m_Interruptable: 0
   m_RequiredIngredientsWindow: Inventory
   m_ResultStorageWindow: Inventory
@@ -296,6 +343,24 @@ MonoBehaviour:
         m_Enabled: 1
         m_WindowName: Alchemy
         m_DestroyWhenEmpty: 0
+    - rid: 4236597672860450892
+      type: {class: SendMessage, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.SendMessage
+        m_Enabled: 1
+        m_Target: 1
+        methodName: 
+        m_Argument:
+          m_BoolValue: 0
+          m_IntValue: 0
+          m_FloatValue: 0
+          m_StringValue: 
+          m_Vector2Value: {x: 0, y: 0}
+          m_Vector3Value: {x: 0, y: 0, z: 0}
+          m_ColorValue: {r: 1, g: 1, b: 1, a: 1}
+          m_ObjectValue: {fileID: 0}
+          m_ArgumentType: 0
+        m_Options: 1
 --- !u!114 &3332343124227870680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -310,3 +375,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: DevionGames.InventorySystem::DevionGames.InventorySystem.DisplayTriggerTooltip
   m_Title: Grandfa
   m_Instruction: Craft
+--- !u!114 &7682491398919318454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7727567350852750599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68165cdf1896c89479a91b2478670c0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DevionGames.InventorySystem::DevionGames.InventorySystem.ItemCollection
+  saveable: 1
+  m_Items: []
+  m_Amounts: 
+  m_Modifiers: []
+  onChange:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &6843287499371634584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7727567350852750599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e29feedc1ae74594585d58b82bbc4bab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DevionGames.InventorySystem::DevionGames.InventorySystem.ItemCollectionPopulator
+  m_ItemGroup: {fileID: -4189101796574138152, guid: e6e229531ac3b3d44aefc358a431d4b8, type: 2}

@@ -156,3 +156,5 @@ public class MetalDetector : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, detectionRange);
     }
 }
+
+

@@ -333,6 +333,10 @@ GameObject:
   - component: {fileID: 2961377007097235465}
   - component: {fileID: 3234856533053435143}
   - component: {fileID: 6202437215820262146}
+  - component: {fileID: 1140852950179144708}
+  - component: {fileID: 8136512706210569714}
+  - component: {fileID: 3762495828741247469}
+  - component: {fileID: 3445132269078073462}
   m_Layer: 0
   m_Name: God
   m_TagString: Untagged
@@ -394,6 +398,136 @@ MonoBehaviour:
   animator: {fileID: 3234856533053435143}
   checkInterval: 20
   coughProbability: 0.1
+--- !u!114 &1140852950179144708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2388308140242482295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b9e57aa32843a04ea948de23e454c98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GodWakeUp
+  animator: {fileID: 3234856533053435143}
+--- !u!114 &8136512706210569714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2388308140242482295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95ff8949b55037043a6183d61fd8dcff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DevionGames.InventorySystem::DevionGames.InventorySystem.DisplayTriggerTooltip
+  m_Title: NPC
+  m_Instruction: Buy Hint
+--- !u!114 &3762495828741247469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2388308140242482295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18135c67df91bfe49aecaf565168592d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DevionGames.InventorySystem::DevionGames.InventorySystem.CraftingTrigger
+  delegates:
+  - eventID: OnTriggerUsed
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: 
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 11500000, guid: b71d3868490ce894cb0dfe20db352ae9, type: 3}
+          m_TargetAssemblyTypeName: UnityEditor.MonoScript, UnityEditor.CoreModule
+          m_MethodName: set_name
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: MouseLockTrue
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: OnWentOutOfRange
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: 
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 11500000, guid: b71d3868490ce894cb0dfe20db352ae9, type: 3}
+          m_TargetAssemblyTypeName: UnityEditor.MonoScript, UnityEditor.CoreModule
+          m_MethodName: set_name
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: MouseLockFalse
+            m_BoolArgument: 0
+          m_CallState: 2
+  useDistance: 1.6
+  triggerType: 9
+  key: 102
+  actionTemplate: {fileID: 0}
+  actions:
+  - rid: 4236597647600779339
+  m_Interruptable: 0
+  m_RequiredIngredientsWindow: Inventory
+  m_ResultStorageWindow: Inventory
+  m_CraftingProgressbar: CraftingProgress
+  references:
+    version: 2
+    RefIds:
+    - rid: 4236597647600779339
+      type: {class: ShowWindow, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: DevionGames.InventorySystem.ShowWindow
+        m_Enabled: 1
+        m_WindowName: Crafting
+        m_DestroyWhenEmpty: 0
+--- !u!114 &3445132269078073462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2388308140242482295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95ff8949b55037043a6183d61fd8dcff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DevionGames.InventorySystem::DevionGames.InventorySystem.DisplayTriggerTooltip
+  m_Title: NPC
+  m_Instruction: Buy Hint
 --- !u!1 &2552734522645920138
 GameObject:
   m_ObjectHideFlags: 0

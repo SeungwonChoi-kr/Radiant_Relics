@@ -29,6 +29,7 @@ public class DayNightCycle : MonoBehaviour
     private static readonly Color DayColor = Color.white;
     // 밤 시간대의 색상 (약간 푸른색, Ambient Light 및 Sun Light)
     private static readonly Color NightColor = new Color(0.1f, 0.1f, 0.3f, 1f);
+    private bool wasNight = false; // 이전 프레임의 밤 상태를 저장
 
     void Update()
     {
@@ -106,17 +107,38 @@ public class DayNightCycle : MonoBehaviour
         // 태양의 현재 강도를 사용하여 주변광의 색상과 밝기를 동적으로 설정합니다.
         RenderSettings.ambientLight = Color.Lerp(NightColor, DayColor, sunLight.intensity / DayIntensity);
 
+
         // **3. Skybox 전환 로직**
+        bool isCurrentlyDay = (currentTimeOfDay >= 0.22f && currentTimeOfDay < 0.8f);
+
+        // 밤에서 낮으로 전환될 때 ResourceManager에 알림
+        if (wasNight && isCurrentlyDay)
+        {
+            if (ResourceManager.Instance != null)
+            {
+                ResourceManager.Instance.RespawnAllPointsForNewDay();
+            }
+        }
+
+        //밤낮 정보를 GameManager에 전달
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.isNight = !isCurrentlyDay;
+        }
+
         // 일출/일몰 시간 근처에서 Skybox를 전환합니다.
-        if (currentTimeOfDay >= 0.22f && currentTimeOfDay < 0.8f)
+        if (isCurrentlyDay)
         {
             // 낮 Skybox 적용
             RenderSettings.skybox = daySkyboxMaterial;
+    
         }
         else
         {
             // 밤 Skybox 적용
             RenderSettings.skybox = nightSkyboxMaterial;
+            
         }
+        wasNight = !isCurrentlyDay;
     }
 }

@@ -291,7 +291,7 @@ MonoBehaviour:
   m_SellCurrency: {fileID: 5024041229951281058}
   m_Stack: 1
   m_MaxStack: 1
-  m_IsDroppable: 1
+  m_IsDroppable: 0
   m_DropSound: {fileID: 0}
   m_OverridePrefab: {fileID: 0}
   m_IsCraftable: 1
@@ -346,12 +346,10 @@ MonoBehaviour:
   - {fileID: -183830824206877811}
   - {fileID: 7530237988924398570}
   - {fileID: -5163029461263222242}
-  - {fileID: -5578804710601317914}
   - {fileID: 3403466014044243614}
   - {fileID: 3070773576733908153}
-  m_Amounts: 01000000010000000100000001000000010000000100000001000000
+  m_Amounts: 010000000100000001000000010000000100000001000000
   m_Modifiers:
-  - modifiers: []
   - modifiers: []
   - modifiers: []
   - modifiers: []
@@ -575,7 +573,7 @@ MonoBehaviour:
   m_SellCurrency: {fileID: 5024041229951281058}
   m_Stack: 1
   m_MaxStack: 1
-  m_IsDroppable: 1
+  m_IsDroppable: 0
   m_DropSound: {fileID: 0}
   m_OverridePrefab: {fileID: 0}
   m_IsCraftable: 1
@@ -605,7 +603,7 @@ MonoBehaviour:
       type: {class: ShowWindow, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
       data:
         m_Type: DevionGames.InventorySystem.ShowWindow
-        m_Enabled: 1
+        m_Enabled: 0
         m_WindowName: Alchemy
         m_DestroyWhenEmpty: 0
 --- !u!114 &11400000
@@ -676,7 +674,7 @@ MonoBehaviour:
   m_SellCurrency: {fileID: 5024041229951281058}
   m_Stack: 1
   m_MaxStack: 1
-  m_IsDroppable: 1
+  m_IsDroppable: 0
   m_DropSound: {fileID: 0}
   m_OverridePrefab: {fileID: 0}
   m_IsCraftable: 1
@@ -708,7 +706,7 @@ MonoBehaviour:
       type: {class: ShowWindow, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
       data:
         m_Type: DevionGames.InventorySystem.ShowWindow
-        m_Enabled: 1
+        m_Enabled: 0
         m_WindowName: Alchemy
         m_DestroyWhenEmpty: 0
 --- !u!114 &2502100708860354697
@@ -972,7 +970,7 @@ MonoBehaviour:
   m_SellCurrency: {fileID: 5024041229951281058}
   m_Stack: 1
   m_MaxStack: 1
-  m_IsDroppable: 1
+  m_IsDroppable: 0
   m_DropSound: {fileID: 0}
   m_OverridePrefab: {fileID: 0}
   m_IsCraftable: 1
@@ -1004,7 +1002,7 @@ MonoBehaviour:
       type: {class: ShowWindow, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
       data:
         m_Type: DevionGames.InventorySystem.ShowWindow
-        m_Enabled: 1
+        m_Enabled: 0
         m_WindowName: Alchemy
         m_DestroyWhenEmpty: 0
 --- !u!114 &7805126266481457177

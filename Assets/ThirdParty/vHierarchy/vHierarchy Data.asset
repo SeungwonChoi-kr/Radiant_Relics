@@ -172,3 +172,4 @@ MonoBehaviour:
   bookmarkedScenePaths:
   - Assets/Scenes/MainScene/MainScene.unity
   - Assets/Scenes/Inventory.unity
+  - Assets/Scenes/PSW_scene/PSW.unity

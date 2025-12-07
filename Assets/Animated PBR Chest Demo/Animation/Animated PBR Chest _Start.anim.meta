@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d6da3095e76907b4fad794b2124f16f6
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 194755
+  packageName: Animated PBR Chest Demo
+  packageVersion: 1.1.0
+  assetPath: Assets/Animated PBR Chest Demo/Animation/Animated PBR Chest _Start.anim
+  uploadId: 618699

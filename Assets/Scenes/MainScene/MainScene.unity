@@ -45883,8 +45883,8 @@ MonoBehaviour:
   m_EaseType: 28
   m_Duration: 0.6
   m_IgnoreTimeScale: 1
-  m_ShowSound: {fileID: 8300000, guid: b8b48c4d6a98902478cd81dc8e386cee, type: 3}
-  m_CloseSound: {fileID: 8300000, guid: b8b48c4d6a98902478cd81dc8e386cee, type: 3}
+  m_ShowSound: {fileID: 8300000, guid: 15e4ef63d51144a1596dfb851b04da8c, type: 3}
+  m_CloseSound: {fileID: 8300000, guid: 41168b1f02ff2411f8b5481b26ae0cd6, type: 3}
   m_Focus: 1
   m_DeactivateOnClose: 1
   m_ShowAndHideCursor: 1

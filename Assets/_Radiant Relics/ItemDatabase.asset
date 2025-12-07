@@ -631,6 +631,7 @@ MonoBehaviour:
   - {fileID: -8332555199865554762}
   - {fileID: 7805126266481457177}
   - {fileID: -7903204988084772043}
+  - {fileID: 6078649337994363019}
   currencies:
   - {fileID: 5024041229951281058}
   raritys: []
@@ -894,6 +895,55 @@ MonoBehaviour:
   ingredients: []
   properties: []
   currencyConversions: []
+--- !u!114 &6078649337994363019
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a78acd5557204d499bcf3420fd4ee78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DevionGames.InventorySystem::DevionGames.InventorySystem.UsableItem
+  m_Id: bcb0fa22-78f8-4e3f-a0b2-f12d190365a9
+  m_ItemName: Relic
+  m_UseItemNameAsDisplayName: 1
+  m_DisplayName: New Item
+  m_Icon: {fileID: 21300000, guid: db3ced84ef58144498e9ec9b72f37396, type: 3}
+  m_Prefab: {fileID: 2360753227334873080, guid: ff3efbbe58e08504398d636287eb9ba3, type: 3}
+  m_Description: 
+  m_Category: {fileID: -6706687112582032658}
+  m_IsSellable: 1
+  m_BuyPrice: 0
+  m_CanBuyBack: 0
+  m_BuyCurrency: {fileID: 5024041229951281058}
+  m_SellPrice: 0
+  m_SellCurrency: {fileID: 5024041229951281058}
+  m_Stack: 1
+  m_MaxStack: 1
+  m_IsDroppable: 1
+  m_DropSound: {fileID: 0}
+  m_OverridePrefab: {fileID: 0}
+  m_IsCraftable: 0
+  m_CraftingDuration: 2
+  m_UseCraftingSkill: 0
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: 0}
+  m_RemoveIngredientsWhenFailed: 0
+  m_MinCraftingSkillValue: 0
+  m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
+  ingredients: []
+  properties: []
+  m_UseCategoryCooldown: 1
+  m_Cooldown: 1
+  actions: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!114 &7530237988924398570
 MonoBehaviour:
   m_ObjectHideFlags: 1

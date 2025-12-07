@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4024853166486081089}
   - component: {fileID: 8487368242791273667}
   - component: {fileID: 793065628607852443}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: plate_lod4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,8 @@ GameObject:
   - component: {fileID: 1762038555143684374}
   - component: {fileID: 1409426921776109267}
   - component: {fileID: 6431104635632045271}
-  m_Layer: 0
+  - component: {fileID: 3974451136618054089}
+  m_Layer: 8
   m_Name: item_iron
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -272,7 +273,28 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
+--- !u!65 &3974451136618054089
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2156568483165051735}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5837584594445033599
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,7 +306,7 @@ GameObject:
   - component: {fileID: 2690008837855343936}
   - component: {fileID: 7812906110123221724}
   - component: {fileID: 7939495548944319698}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: plate_lod0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -373,7 +395,7 @@ GameObject:
   - component: {fileID: 6325161362113756906}
   - component: {fileID: 1122312225087023314}
   - component: {fileID: 6029573358208342580}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: plate_lod2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -462,7 +484,7 @@ GameObject:
   - component: {fileID: 9186617509986690386}
   - component: {fileID: 2157565024215220839}
   - component: {fileID: 4940758179217505750}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: plate_lod3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -551,7 +573,7 @@ GameObject:
   - component: {fileID: 9130214771529235301}
   - component: {fileID: 2128017450353913893}
   - component: {fileID: 8827405963382878162}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: plate_lod1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

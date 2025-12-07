@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7015481401848111211}
   - component: {fileID: 3104241031290866922}
   - component: {fileID: 7013453199107893695}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: plate_lod4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 8046574017098400371}
   - component: {fileID: 8387322871120097951}
   - component: {fileID: 3126057893639071826}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: plate_lod3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -189,7 +189,7 @@ GameObject:
   - component: {fileID: 5466909009981444109}
   - component: {fileID: 416084860371343917}
   - component: {fileID: 7195448002956454491}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: plate_lod2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -278,7 +278,7 @@ GameObject:
   - component: {fileID: 3022750768452873379}
   - component: {fileID: 4014295745005356476}
   - component: {fileID: 2205289312083553461}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: plate_lod1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -370,7 +370,8 @@ GameObject:
   - component: {fileID: 2157854337289543211}
   - component: {fileID: 4944129118103167314}
   - component: {fileID: 7792048483335384550}
-  m_Layer: 0
+  - component: {fileID: -5744976383431602438}
+  m_Layer: 8
   m_Name: item_silver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -485,7 +486,7 @@ MonoBehaviour:
   saveable: 1
   m_Items:
   - {fileID: 3403466014044243614, guid: e6e229531ac3b3d44aefc358a431d4b8, type: 2}
-  m_Amounts: 01000000
+  m_Amounts: 64000000
   m_Modifiers:
   - modifiers: []
   onChange:
@@ -539,7 +540,28 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
+--- !u!65 &-5744976383431602438
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7851437992630268516}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7888971822413545503
 GameObject:
   m_ObjectHideFlags: 0
@@ -551,7 +573,7 @@ GameObject:
   - component: {fileID: 6163566977335515208}
   - component: {fileID: 4518791219369312541}
   - component: {fileID: 4225048773812471677}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: plate_lod0
   m_TagString: Untagged
   m_Icon: {fileID: 0}

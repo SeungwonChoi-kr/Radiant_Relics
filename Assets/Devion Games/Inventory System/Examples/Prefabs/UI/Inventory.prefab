@@ -4093,11 +4093,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68165cdf1896c89479a91b2478670c0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  saveable: 1
+  saveable: 0
   m_Items:
-  - {fileID: 3451520879177863632, guid: e6e229531ac3b3d44aefc358a431d4b8, type: 2}
-  m_Amounts: 01000000
+  - {fileID: 3070773576733908153, guid: e6e229531ac3b3d44aefc358a431d4b8, type: 2}
+  - {fileID: 3403466014044243614, guid: e6e229531ac3b3d44aefc358a431d4b8, type: 2}
+  - {fileID: -5578804710601317914, guid: e6e229531ac3b3d44aefc358a431d4b8, type: 2}
+  m_Amounts: 640000006400000064000000
   m_Modifiers:
+  - modifiers: []
+  - modifiers: []
   - modifiers: []
   - modifiers: []
   - modifiers:

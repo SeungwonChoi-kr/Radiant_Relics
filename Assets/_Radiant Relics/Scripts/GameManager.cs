@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using DevionGames;
 
 // 게임의 모든 설정을 한 곳에서 관리하는 싱글톤 클래스
 public class GameManager : MonoBehaviour
@@ -227,6 +228,15 @@ public class GameManager : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
         }
     }
+    public void MouseLockTrue(CallbackEventData data)
+    {
+        SetCursorState(true);
+
+    }
+    public void MouseLockFalse(CallbackEventData data)
+    {
+        SetCursorState(false);
+    }
 
     // 오디오 설정 메서드들
     public void SetMasterVolume(float value)
@@ -272,4 +282,5 @@ public class GameManager : MonoBehaviour
         voiceVolume = 1.0f;
         mute = false;
     }
+
 }

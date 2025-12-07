@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 79d0ec8cd00afa248878c1db5463cf68
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 194755
+  packageName: Animated PBR Chest Demo
+  packageVersion: 1.1.0
+  assetPath: Assets/Animated PBR Chest Demo/Materials/Plane D.mat
+  uploadId: 618699

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8c2faea5490bc9849abb4afc2a0c9121
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 320964
+  packageName: True Track System - Spline Merger
+  packageVersion: 1.0.3
+  assetPath: Assets/TrueTrackSystem/Materials/trackStraight.mat
+  uploadId: 760796

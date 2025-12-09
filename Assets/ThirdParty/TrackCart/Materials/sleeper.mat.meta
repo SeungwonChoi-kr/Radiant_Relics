@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8830f781598428d4a8217b768c09db74
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 320964
+  packageName: True Track System - Spline Merger
+  packageVersion: 1.0.3
+  assetPath: Assets/TrueTrackSystem/Materials/sleeper.mat
+  uploadId: 760796

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: bd91fbcacf35bf3419c7b0f9654600ff
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 320964
+  packageName: True Track System - Spline Merger
+  packageVersion: 1.0.3
+  assetPath: Assets/TrueTrackSystem/Prefabs/minecart_v2.prefab
+  uploadId: 760796

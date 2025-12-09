@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d964014b0b09fec4f96bfecd6e53357a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 320964
+  packageName: True Track System - Spline Merger
+  packageVersion: 1.0.3
+  assetPath: Assets/TrueTrackSystem/Materials/minecart.mat
+  uploadId: 760796

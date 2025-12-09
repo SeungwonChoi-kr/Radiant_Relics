@@ -146,10 +146,12 @@ namespace DevionGames
         {
             if (PlayerInfo == null) return;
 
+            if (m_LayerStateMap == null) return;    // 수정하였습니다.
+
             Animator animator = PlayerInfo.animator;
             if (animator != null)
             {
-                for (int j = 0; j < this.m_LayerStateMap.Length; j++)
+                for (int j = 0; j < this.m_LayerStateMap.Length; j++)   // 여기서 에러가 뜨는 것 같아서
                 {
                     if (animator.GetCurrentAnimatorStateInfo(j).shortNameHash != this.m_LayerStateMap[j].shortNameHash && !animator.IsInTransition(j))
                     {

@@ -25,7 +25,7 @@ namespace DevionGames.InventorySystem
 		/// </summary>
 		public static InventoryManager current {
 			get {
-                Assert.IsNotNull(m_Current, "Requires an Inventory Manager.Create one from Tools > Devion Games > Inventory System > Create Inventory Manager!");
+                Assert.IsNotNull(m_Current, "Requires an Inventory Manager. 만약 게임 종료 중 뜬 에러라면 Inventory Manager가 먼저 Destroy돼서 생기는 무시할 만한 오류임.");    // 에러 메시지가 뜨는 이유를 살짝 수정함.
 				return m_Current;
 			}
 		}

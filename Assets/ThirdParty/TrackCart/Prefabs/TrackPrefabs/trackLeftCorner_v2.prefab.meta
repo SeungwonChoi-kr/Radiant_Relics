@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d7eab99fc4ffc084a909a18785fc6806
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 320964
+  packageName: True Track System - Spline Merger
+  packageVersion: 1.0.3
+  assetPath: Assets/TrueTrackSystem/Prefabs/TrackPrefabs/trackLeftCorner_v2.prefab
+  uploadId: 760796

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 1bc05377e93d152489b9fd299ac65f8f
+timeCreated: 1498660433
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 94333
+  packageName: Dragon PBR
+  packageVersion: 1.0
+  assetPath: Assets/RedDragon 1.2/Assets/Animator/RedDragon1.1Example.controller
+  uploadId: 256091

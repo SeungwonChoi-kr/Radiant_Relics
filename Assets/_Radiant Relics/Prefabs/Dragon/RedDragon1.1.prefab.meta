@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 8431058aa84a65044bbe46298ab86574
+timeCreated: 1510572891
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 94333
+  packageName: Dragon PBR
+  packageVersion: 1.0
+  assetPath: Assets/ThirdParty/Dragon/RedDragon 1.2/Assets/Prefab/RedDragon1.1.prefab
+  uploadId: 256091

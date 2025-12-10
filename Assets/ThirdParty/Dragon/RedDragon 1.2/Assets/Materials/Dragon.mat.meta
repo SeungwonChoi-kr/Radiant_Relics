@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 635ce382210988348a8496d2faade8c9
+timeCreated: 1510571846
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 94333
+  packageName: Dragon PBR
+  packageVersion: 1.0
+  assetPath: Assets/RedDragon 1.2/Assets/Materials/Dragon.mat
+  uploadId: 256091

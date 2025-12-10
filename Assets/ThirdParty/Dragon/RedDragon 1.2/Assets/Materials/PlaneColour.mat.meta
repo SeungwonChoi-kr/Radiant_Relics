@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 3b83915a4af6b09438a38476d4c6740a
+timeCreated: 1510572213
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 94333
+  packageName: Dragon PBR
+  packageVersion: 1.0
+  assetPath: Assets/RedDragon 1.2/Assets/Materials/PlaneColour.mat
+  uploadId: 256091

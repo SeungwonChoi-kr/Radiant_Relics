@@ -1,5 +1,5 @@
 ﻿using DevionGames;
-
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -293,16 +293,19 @@ public class GameManager : MonoBehaviour
     public void AddTreasureCount()
     {
         collectedTreasures++;
-        Debug.Log("[GameManager] " + collectedTreasures + "개 찾음");
 
-        if (collectedTreasures >= 3)
+        if (collectedTreasures >= 3 && !gameEnding)
         {
-            GoToEnding();
+            StartCoroutine(GoToEndingSequence());
         }
     }
 
-    void GoToEnding()
+    IEnumerator GoToEndingSequence()
     {
+        gameEnding = true;
+
+        yield return new WaitForSeconds(5f);
+
         SceneManager.LoadScene("EndingScene");
     }
 }

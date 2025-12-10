@@ -672,7 +672,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uB9C8\uCE68\uB0B4 \uBCF4\uBB3C\uC744 \uBAA8\uB450 \uCC3E\uC544\uC654\uAD70"
+  m_text: "\uB9C8\uCE68\uB0B4 \uBCF4\uBB3C\uC744 \uBAA8\uB450 \uCC3E\uC544\uC654\uAD70."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 49d4f2f8962652040b167e7f6ffa568e, type: 2}
   m_sharedMaterial: {fileID: -130109946967697270, guid: 49d4f2f8962652040b167e7f6ffa568e, type: 2}
@@ -1498,7 +1498,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uD55C\uBC88 \uACB0\uC815\uD55C \uC18C\uC6D0\uC740 \uB418\uB3CC\uB9B4
     \uC218 \uC5C6\uB2E4.\n\uB124\uAC00 \uAC00\uC7A5 \uC6D0\uD558\uB294 \uC18C\uC6D0\uC744
-    \uC2E0\uC911\uD558\uAC8C \uACB0\uC815\uD558\uAC70\uB77C"
+    \uC2E0\uC911\uD558\uAC8C \uACB0\uC815\uD574\uB77C."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 49d4f2f8962652040b167e7f6ffa568e, type: 2}
   m_sharedMaterial: {fileID: -130109946967697270, guid: 49d4f2f8962652040b167e7f6ffa568e, type: 2}
@@ -2406,23 +2406,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7054687465761736342, guid: acb8c480173caf4469a4345315059aa1, type: 3}
   m_PrefabInstance: {fileID: 1709605251}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &730685164
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 730685158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c914d4c161841f54d8e727051ce62106, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerPickUp
-  interactDistance: 3
-  pickupLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  handObject: {fileID: 0}
 --- !u!114 &730685165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5372,8 +5355,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "\uB098\uB294 \uC138\uC0C1\uC758 \uC5FC\uC6D0, \uACE7 \uC6A9\uC2E0\uC758
-    \uD604\uC2E0\uC774\uB2E4.\n\uB124\uAC00 \uADF8 \uBCF4\uBB3C\uC744 \uAC00\uC838\uC654\uC73C\uB2C8
-    \uC18C\uC6D0\uC744 \uBE4C \uC790\uACA9\uC774 \uCDA9\uBD84\uD558\uAD6C\uB098"
+    \uD604\uC2E0\uC774\uB2E4.\n\uB124\uAC00 \uBAA8\uB4E0 \uBCF4\uBB3C\uC744 \uCC3E\uC558\uC73C\uB2C8
+    \uD55C \uAC00\uC9C0 \uC18C\uC6D0\uC744 \uC774\uB8E8\uC5B4 \uC8FC\uB3C4\uB85D
+    \uD558\uACA0\uB2E4."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 49d4f2f8962652040b167e7f6ffa568e, type: 2}
   m_sharedMaterial: {fileID: -130109946967697270, guid: 49d4f2f8962652040b167e7f6ffa568e, type: 2}
@@ -5787,6 +5771,8 @@ PrefabInstance:
     - {fileID: 6998854983603221348, guid: acb8c480173caf4469a4345315059aa1, type: 3}
     - {fileID: 7727470073946913855, guid: acb8c480173caf4469a4345315059aa1, type: 3}
     - {fileID: 2723771625585615629, guid: acb8c480173caf4469a4345315059aa1, type: 3}
+    - {fileID: 8289730060058495478, guid: acb8c480173caf4469a4345315059aa1, type: 3}
+    - {fileID: 6413456469702399716, guid: acb8c480173caf4469a4345315059aa1, type: 3}
     m_RemovedGameObjects:
     - {fileID: 3238499564305143639, guid: acb8c480173caf4469a4345315059aa1, type: 3}
     - {fileID: 3923775235257251517, guid: acb8c480173caf4469a4345315059aa1, type: 3}
@@ -5794,9 +5780,6 @@ PrefabInstance:
     - {fileID: 7472834475401248081, guid: acb8c480173caf4469a4345315059aa1, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7054687465761736342, guid: acb8c480173caf4469a4345315059aa1, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 730685164}
     - targetCorrespondingSourceObject: {fileID: 7054687465761736342, guid: acb8c480173caf4469a4345315059aa1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 730685165}
@@ -9701,7 +9684,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "\uB9DD\uC124\uC77C \uC2DC\uAC04\uC740 \uB05D\uB0AC\uB2E4. \uB124 \uC18C\uC6D0\uC744
-    \uC774\uB8E8\uC5B4\uC8FC\uB9C8\n\uB108\uC758 \uC18C\uC6D0\uC740....!!"
+    \uC774\uB8E8\uC5B4\uC8FC\uB9C8.\n\uB108\uC758 \uC18C\uC6D0\uC740....!!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 49d4f2f8962652040b167e7f6ffa568e, type: 2}
   m_sharedMaterial: {fileID: -130109946967697270, guid: 49d4f2f8962652040b167e7f6ffa568e, type: 2}
@@ -9871,55 +9854,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EndingSceneController
   endingDirector: {fileID: 0}
   mainMenuSceneName: Start
---- !u!1 &1995239801
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1995239803}
-  - component: {fileID: 1995239802}
-  m_Layer: 0
-  m_Name: DayNightManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1995239802
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1995239801}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19697c7660106b64abad5a1f2519c21e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DayNightCycle
-  sunLight: {fileID: 2115450745}
-  dayDuration: 30
-  timeScale: 1
-  daySkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
-  nightSkyboxMaterial: {fileID: 2100000, guid: 2d056ac30ecc9e542b26e06133f23602, type: 2}
---- !u!4 &1995239803
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1995239801}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2045835083
 GameObject:
   m_ObjectHideFlags: 0
@@ -10403,7 +10337,6 @@ SceneRoots:
   - {fileID: 952688856}
   - {fileID: 1641730905}
   - {fileID: 1279056147}
-  - {fileID: 1995239803}
   - {fileID: 417813301}
   - {fileID: 2126690154}
   - {fileID: 1709605251}

@@ -1,0 +1,29 @@
+fileFormatVersion: 2
+guid: f4ec03caa29683f4895bf1644508ad25
+AudioImporter:
+  externalObjects: {}
+  serializedVersion: 6
+  defaultSettings:
+    loadType: 0
+    sampleRateSetting: 0
+    sampleRateOverride: 44100
+    compressionFormat: 1
+    quality: 1
+    conversionMode: 0
+  platformSettingOverrides: {}
+  forceToMono: 0
+  normalize: 1
+  preloadAudioData: 1
+  loadInBackground: 0
+  ambisonic: 0
+  3D: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 225884
+  packageName: Free Medieval Fantasy Song
+  packageVersion: 1.0
+  assetPath: Assets/Peacetown Forest/Peacetown Forest_63 BPM.wav
+  uploadId: 508858

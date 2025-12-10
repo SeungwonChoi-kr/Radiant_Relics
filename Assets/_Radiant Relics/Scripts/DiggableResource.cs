@@ -101,8 +101,6 @@ public class DiggableResource : MonoBehaviour
     {
         if (isFullyDug)
         {
-            // 인벤토리 로직 실행
-
             Destroy(this.gameObject); // 광물 오브젝트 파괴
         }
     }

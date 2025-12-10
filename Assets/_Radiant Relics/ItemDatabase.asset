@@ -279,7 +279,7 @@ MonoBehaviour:
   m_Name: 'Final Upgrade module '
   m_EditorClassIdentifier: DevionGames.InventorySystem::DevionGames.InventorySystem.UsableItem
   m_Id: aa2409b8-e95e-4ca9-8061-314c844d6477
-  m_ItemName: 'Final Upgrade module '
+  m_ItemName: Final Upgrade module
   m_UseItemNameAsDisplayName: 1
   m_DisplayName: New Item
   m_Icon: {fileID: 21300000, guid: 9e2c99a2f1ae70343ba923d766b9ead8, type: 3}

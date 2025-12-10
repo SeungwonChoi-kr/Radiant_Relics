@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d3b619b2264afc43993ac557926d0ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DiggableResource
-  digRequiredHits: 3
+  digRequiredHits: 5
   currentHits: 0
   isFullyDug: 0
   maxRiseHeight: 4
@@ -190,7 +190,7 @@ MonoBehaviour:
   dropItemPrefab: {fileID: 0}
   minDropCount: 1
   maxDropCount: 1
-  popForce: 3
+  popForce: 0
 --- !u!65 &3120434450890590934
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -1,5 +1,7 @@
-﻿using UnityEngine;
-using DevionGames;
+﻿using DevionGames;
+
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 // 게임의 모든 설정을 한 곳에서 관리하는 싱글톤 클래스
 public class GameManager : MonoBehaviour
@@ -99,6 +101,11 @@ public class GameManager : MonoBehaviour
 
     [Tooltip("음소거")]
     public bool mute = false;
+
+
+    [Header("엔딩")]
+    public int collectedTreasures = 0;
+    public bool gameEnding = false;
 
     void Awake()
     {
@@ -283,4 +290,19 @@ public class GameManager : MonoBehaviour
         mute = false;
     }
 
+    public void AddTreasureCount()
+    {
+        collectedTreasures++;
+        Debug.Log("[GameManager] " + collectedTreasures + "개 찾음");
+
+        if (collectedTreasures >= 3)
+        {
+            GoToEnding();
+        }
+    }
+
+    void GoToEnding()
+    {
+        SceneManager.LoadScene("EndingScene");
+    }
 }

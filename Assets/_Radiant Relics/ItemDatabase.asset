@@ -276,7 +276,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a78acd5557204d499bcf3420fd4ee78, type: 3}
-  m_Name: 'Final Upgrade module '
+  m_Name: Final Upgrade module
   m_EditorClassIdentifier: DevionGames.InventorySystem::DevionGames.InventorySystem.UsableItem
   m_Id: aa2409b8-e95e-4ca9-8061-314c844d6477
   m_ItemName: Final Upgrade module
@@ -903,8 +903,12 @@ MonoBehaviour:
   - {fileID: -8332555199865554762}
   - {fileID: 7805126266481457177}
   - {fileID: -7903204988084772043}
-  m_Amounts: 010000000100000001000000
+  - {fileID: 374886385746216925}
+  - {fileID: 8112918991188016083}
+  m_Amounts: 0100000001000000010000000100000001000000
   m_Modifiers:
+  - modifiers: []
+  - modifiers: []
   - modifiers: []
   - modifiers: []
   - modifiers: []

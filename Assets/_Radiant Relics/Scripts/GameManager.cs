@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿using DevionGames;
+
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 // 게임의 모든 설정을 한 곳에서 관리하는 싱글톤 클래스
 public class GameManager : MonoBehaviour
@@ -98,6 +101,11 @@ public class GameManager : MonoBehaviour
 
     [Tooltip("음소거")]
     public bool mute = false;
+
+
+    [Header("엔딩")]
+    public int collectedTreasures = 0;
+    public bool gameEnding = false;
 
     void Awake()
     {
@@ -227,6 +235,15 @@ public class GameManager : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
         }
     }
+    public void MouseLockTrue(CallbackEventData data)
+    {
+        SetCursorState(true);
+
+    }
+    public void MouseLockFalse(CallbackEventData data)
+    {
+        SetCursorState(false);
+    }
 
     // 오디오 설정 메서드들
     public void SetMasterVolume(float value)
@@ -271,5 +288,21 @@ public class GameManager : MonoBehaviour
         sfxVolume = 0.9f;
         voiceVolume = 1.0f;
         mute = false;
+    }
+
+    public void AddTreasureCount()
+    {
+        collectedTreasures++;
+        Debug.Log("[GameManager] " + collectedTreasures + "개 찾음");
+
+        if (collectedTreasures >= 3)
+        {
+            GoToEnding();
+        }
+    }
+
+    void GoToEnding()
+    {
+        SceneManager.LoadScene("EndingScene");
     }
 }

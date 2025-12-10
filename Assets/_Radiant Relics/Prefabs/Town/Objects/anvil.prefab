@@ -9,6 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4529479235166262523}
+  - component: {fileID: 3732840424676941404}
+  - component: {fileID: 4630789296156247566}
+  - component: {fileID: 7337474672256670006}
+  - component: {fileID: 4458813772789019840}
   m_Layer: 0
   m_Name: anvil
   m_TagString: Untagged
@@ -33,6 +37,206 @@ Transform:
   - {fileID: 78854785034317788}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
+--- !u!114 &3732840424676941404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2709389615350770843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc68840feac92b94ebd1aafc18574c61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DevionGames.Triggers::DevionGames.BehaviorTrigger
+  delegates:
+  - eventID: OnTriggerUsed
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: UpgradeReceiver, Assembly-CSharp
+          m_MethodName: TryUpgrade
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  useDistance: 2
+  triggerType: 9
+  key: 102
+  actionTemplate: {fileID: 0}
+  actions:
+  - rid: 4236597675920195668
+  m_Interruptable: 0
+  references:
+    version: 2
+    RefIds:
+    - rid: 4236597675920195668
+      type: {class: HasItem, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: DevionGames.InventorySystem.HasItem
+        m_Enabled: 1
+        requiredItems:
+        - item: {fileID: 2226080808522005571, guid: e6e229531ac3b3d44aefc358a431d4b8, type: 2}
+          category: {fileID: 0}
+          boolValue: 0
+          stringValue: 1
+          intValue: 0
+--- !u!114 &4630789296156247566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2709389615350770843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc68840feac92b94ebd1aafc18574c61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DevionGames.Triggers::DevionGames.BehaviorTrigger
+  delegates:
+  - eventID: OnTriggerUsed
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: UpgradeReceiver, Assembly-CSharp
+          m_MethodName: TryUpgrade
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  useDistance: 2
+  triggerType: 9
+  key: 102
+  actionTemplate: {fileID: 0}
+  actions:
+  - rid: 4236597675920195668
+  m_Interruptable: 0
+  references:
+    version: 2
+    RefIds:
+    - rid: 4236597675920195668
+      type: {class: HasItem, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: DevionGames.InventorySystem.HasItem
+        m_Enabled: 1
+        requiredItems:
+        - item: {fileID: -183830824206877811, guid: e6e229531ac3b3d44aefc358a431d4b8, type: 2}
+          category: {fileID: 0}
+          boolValue: 0
+          stringValue: 1
+          intValue: 0
+--- !u!114 &7337474672256670006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2709389615350770843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc68840feac92b94ebd1aafc18574c61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DevionGames.Triggers::DevionGames.BehaviorTrigger
+  delegates:
+  - eventID: OnTriggerUsed
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: UpgradeReceiver, Assembly-CSharp
+          m_MethodName: TryUpgrade
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  useDistance: 2
+  triggerType: 9
+  key: 102
+  actionTemplate: {fileID: 0}
+  actions:
+  - rid: 4236597675920195668
+  m_Interruptable: 0
+  references:
+    version: 2
+    RefIds:
+    - rid: 4236597675920195668
+      type: {class: HasItem, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: DevionGames.InventorySystem.HasItem
+        m_Enabled: 1
+        requiredItems:
+        - item: {fileID: 7530237988924398570, guid: e6e229531ac3b3d44aefc358a431d4b8, type: 2}
+          category: {fileID: 0}
+          boolValue: 0
+          stringValue: 1
+          intValue: 0
+--- !u!114 &4458813772789019840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2709389615350770843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc68840feac92b94ebd1aafc18574c61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DevionGames.Triggers::DevionGames.BehaviorTrigger
+  delegates:
+  - eventID: OnTriggerUsed
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: UpgradeReceiver, Assembly-CSharp
+          m_MethodName: TryUpgrade
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  useDistance: 2
+  triggerType: 9
+  key: 102
+  actionTemplate: {fileID: 0}
+  actions:
+  - rid: 4236597675920195668
+  m_Interruptable: 0
+  references:
+    version: 2
+    RefIds:
+    - rid: 4236597675920195668
+      type: {class: HasItem, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: DevionGames.InventorySystem.HasItem
+        m_Enabled: 1
+        requiredItems:
+        - item: {fileID: -5163029461263222242, guid: e6e229531ac3b3d44aefc358a431d4b8, type: 2}
+          category: {fileID: 0}
+          boolValue: 0
+          stringValue: 1
+          intValue: 0
 --- !u!1 &3870202901242532626
 GameObject:
   m_ObjectHideFlags: 0
@@ -60,7 +264,7 @@ Transform:
   m_GameObject: {fileID: 3870202901242532626}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.278, y: 0.1, z: 0}
+  m_LocalPosition: {x: 0.062, y: 0.1, z: -0.068}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -148,13 +352,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6132364914662399722}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.4002387, y: 0.116108835, z: -0.031665955, w: 0.908474}
-  m_LocalPosition: {x: 0.10700001, y: 0.32219994, z: 0.04429996}
+  m_LocalRotation: {x: 0.36937508, y: 0.39906752, z: -0.15733881, w: 0.8243492}
+  m_LocalPosition: {x: 0.317, y: 0.445, z: 0.014}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4529479235166262523}
-  m_LocalEulerAnglesHint: {x: 47.271, y: 15.876, z: 2.991}
+  m_LocalEulerAnglesHint: {x: 47.271, y: 52.972, z: 2.991}
 --- !u!33 &5825059292041818734
 MeshFilter:
   m_ObjectHideFlags: 0

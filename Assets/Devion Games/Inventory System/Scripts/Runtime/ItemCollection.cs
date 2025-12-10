@@ -86,8 +86,8 @@ namespace DevionGames.InventorySystem
                 Add(groupItems);
             } 
             this.m_Initialized = true;
-
-		}
+          
+        }
 
 		public Item this [int index] {
 			get { return this.m_Items [index]; }

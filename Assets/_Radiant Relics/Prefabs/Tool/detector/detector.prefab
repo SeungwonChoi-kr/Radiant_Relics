@@ -31,6 +31,7 @@ RectTransform:
   m_LocalScale: {x: 0.00002, y: 0.00005, z: 0.00005}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2758989250091624368}
   - {fileID: 1546051425623197071}
   - {fileID: 1633748253678575138}
   - {fileID: 9129701645092297324}
@@ -39,7 +40,6 @@ RectTransform:
   - {fileID: 216117486079388441}
   - {fileID: 1472958787718371033}
   - {fileID: 1806306579632198924}
-  - {fileID: 2758989250091624368}
   m_Father: {fileID: 8262236607201767868}
   m_LocalEulerAnglesHint: {x: 34.226, y: 90, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9bac1fc931bbe8418ebc62d680a3d59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MetalDetector
-  detectionRange: 20
+  initdetectionRange: 20
   metalLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -1168,3 +1168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ToolData
   toolName: Detector
   toolIcon: {fileID: 21300000, guid: cac0a5fd2f6f6444e8dab14040de2e3e, type: 3}
+  level: 0
+  targetRenderer: {fileID: 0}
+  levelTexture: {fileID: 0}
+  levelIcon: {fileID: 0}

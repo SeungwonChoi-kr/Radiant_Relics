@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5df1798577322a84bb63bf687f1e8590
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 194755
+  packageName: Animated PBR Chest Demo
+  packageVersion: 1.1.0
+  assetPath: Assets/Animated PBR Chest Demo/Materials/Light_D.mat
+  uploadId: 618699

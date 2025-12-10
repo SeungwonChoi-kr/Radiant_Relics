@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0daacf384e1326c4399d58d67cfe1c7c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 320964
+  packageName: True Track System - Spline Merger
+  packageVersion: 1.0.3
+  assetPath: Assets/TrueTrackSystem/Materials/trackCornerLeft.mat
+  uploadId: 760796

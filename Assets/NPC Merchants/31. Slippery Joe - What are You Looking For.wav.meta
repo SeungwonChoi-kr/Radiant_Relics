@@ -1,0 +1,30 @@
+fileFormatVersion: 2
+guid: 38f3851572b7f4e609281b3dea9975ac
+AudioImporter:
+  externalObjects: {}
+  serializedVersion: 7
+  defaultSettings:
+    serializedVersion: 2
+    loadType: 0
+    sampleRateSetting: 0
+    sampleRateOverride: 44100
+    compressionFormat: 1
+    quality: 1
+    conversionMode: 0
+    preloadAudioData: 0
+  platformSettingOverrides: {}
+  forceToMono: 0
+  normalize: 1
+  loadInBackground: 0
+  ambisonic: 0
+  3D: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 301323
+  packageName: NPC Merchants - Voice Pack
+  packageVersion: 1.0
+  assetPath: Assets/NPC Merchants/31. Slippery Joe - What are You Looking For.wav
+  uploadId: 705052

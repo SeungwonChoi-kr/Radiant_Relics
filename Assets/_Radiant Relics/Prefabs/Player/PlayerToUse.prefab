@@ -731,6 +731,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ToolData
   toolName: hand
   toolIcon: {fileID: 21300000, guid: 18ef0397fbf015045a6cab4cad0ba8dc, type: 3}
+  level: 0
+  targetRenderer: {fileID: 0}
+  levelTexture: {fileID: 0}
+  levelIcon: {fileID: 0}
 --- !u!1001 &6902454961372206899
 PrefabInstance:
   m_ObjectHideFlags: 0

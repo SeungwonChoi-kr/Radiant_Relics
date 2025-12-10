@@ -60,10 +60,11 @@ public class DiggableResource : MonoBehaviour
         {
             parentPoint.OnMined();  // 자기 부모 오브젝트인 ResourceSpawnPoint의 OnMined 함수를 호출하여 검은색으로 변경 & 자원 오브젝트 파괴
         }
-        else
+        else if (gameObject.layer == LayerMask.NameToLayer("Treasure"))
         {
-            Debug.LogError("[DiggableResource] 부모가 없는 오브젝트 채굴?");
-            return;
+            GameManager.Instance.AddTreasureCount();
+
+            Destroy(gameObject);
         }
 
         if (dropItemPrefab != null)
@@ -88,10 +89,6 @@ public class DiggableResource : MonoBehaviour
                 }
             }
         }
-        else
-        {
-            Debug.LogError("[DiggableResource] 드랍할 오브젝트가 할당되지 않음");
-        }
 
         Destroy(this.gameObject);
     }
@@ -101,8 +98,6 @@ public class DiggableResource : MonoBehaviour
     {
         if (isFullyDug)
         {
-            // 인벤토리 로직 실행
-
             Destroy(this.gameObject); // 광물 오브젝트 파괴
         }
     }

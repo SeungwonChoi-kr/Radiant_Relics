@@ -3,7 +3,7 @@
 public class Shovel : MonoBehaviour
 {
     [Header("Digging Settings")]
-    public float digDistance = 3f;      // 삽질이 유효한 최대 거리
+    public float digDistance = 5f;      // 삽질이 유효한 최대 거리
     public LayerMask groundLayer;       // 땅 레이어 (삽질 유효성 확인용)
     public LayerMask resourceLayer;     // DiggableResource 오브젝트 레이어
 

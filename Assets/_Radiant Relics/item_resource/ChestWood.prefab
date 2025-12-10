@@ -75,7 +75,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: DevionGames.InventorySystem::DevionGames.InventorySystem.Trigger
   delegates: []
-  useDistance: 2
+  useDistance: 5
   triggerType: 9
   key: 102
   actionTemplate: {fileID: 0}

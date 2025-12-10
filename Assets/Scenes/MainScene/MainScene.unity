@@ -25881,7 +25881,7 @@ MonoBehaviour:
   sfxVolume: 0.9
   voiceVolume: 1
   mute: 0
-  collectedTreasures: 0
+  collectedTreasures: 2
   gameEnding: 0
 --- !u!1 &953802383
 GameObject:

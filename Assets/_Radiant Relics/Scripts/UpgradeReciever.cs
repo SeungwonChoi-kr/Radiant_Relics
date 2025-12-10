@@ -1,53 +1,70 @@
 ﻿using UnityEngine;
-using DevionGames;
-using System.Reflection;
-using System.Collections.Generic;
+using DevionGames.InventorySystem;
+using Unity.VisualScripting;
 
 public class UpgradeReceiver : MonoBehaviour
 {
     public int level = 0;
+    public ToolData targetToolData;
 
-    public void UpgradeTo1(CallbackEventData data = null)
+    // 창이 닫혀 있어도 아이템을 검색하는 함수
+    private bool HasModule(string moduleName)
     {
-        level = 1;
-        Debug.Log($"업그레이드 1단계!");
+        int amount = ItemContainer.GetItemAmount("Inventory", moduleName);
+        return amount > 0;
+    }
 
-        // data가 들어왔을 때만 출력
-        if (data != null)
+    // 모듈 사용 후 소비까지 하고 싶다면 true로 변경
+    public bool consumeModule = false;
+
+    private void UseModule(string moduleName)
+    {
+        if (!consumeModule) return;
+        Item module = ItemContainer.GetItem("Inventory", moduleName);
+        if (module != null)
         {
-            // private Dictionary<string, object> properties 접근
-            var field = typeof(CallbackEventData).GetField("properties",
-                BindingFlags.NonPublic | BindingFlags.Instance);
-
-            if (field != null)
-            {
-                var dict = field.GetValue(data) as Dictionary<string, object>;
-                if (dict != null)
-                {
-                    foreach (var pair in dict)
-                    {
-                        Debug.Log($"data[{pair.Key}] = {pair.Value}");
-                    }
-                }
-            }
+            ItemContainer.RemoveItem("Inventory", module, 1);
         }
     }
 
-    public void UpgradeTo2(CallbackEventData data = null)
+    // 업그레이드 실행 함수
+    public void TryUpgrade()
     {
-        level = 2;
-        Debug.Log($"업그레이드 2단계!");
+        Debug.Log($"[업그레이드 시도] 현재 레벨: {level}");
+
+        if (level == 0 && HasModule("Upgrade module 1"))
+        {
+            UpgradeTo(1);
+            UseModule("Upgrade module 1");
+        }
+        else if (level == 1 && HasModule("Upgrade_module 2"))
+        {
+            UpgradeTo(2);
+            UseModule("Upgrade_module 2");
+        }
+        else if (level == 2 && HasModule("Upgrade module 3"))
+        {
+            UpgradeTo(3);
+            UseModule("Upgrade module 3");
+        }
+        else if (level == 3 && HasModule("Final Upgrade module"))
+        {
+            UpgradeTo(4);
+            UseModule("Final Upgrade module");
+        }
+        else
+        {
+            Debug.LogWarning("업그레이드 실패: 필요한 모듈이 없습니다.");
+        }
     }
 
-    public void UpgradeTo3(CallbackEventData data = null)
+    private void UpgradeTo(int nextLevel)
     {
-        level = 3;
-        Debug.Log($"업그레이드 3단계!");
-    }
-
-    public void UpgradeFinal(CallbackEventData data = null)
-    {
-        level = 4;
-        Debug.Log($"최종 업그레이드!");
+        Debug.Log($"업그레이드 성공! {level} → {nextLevel}");
+        level = nextLevel;
+        if (targetToolData != null)
+        {
+            targetToolData.Upgrade(nextLevel);
+        }
     }
 }

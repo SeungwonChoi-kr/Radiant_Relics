@@ -56,8 +56,8 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: UpgradeReceiver, Assembly-CSharp
-          m_MethodName: UpgradeTo1
-          m_Mode: 0
+          m_MethodName: TryUpgrade
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -66,7 +66,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  useDistance: 1.5
+  useDistance: 2
   triggerType: 9
   key: 102
   actionTemplate: {fileID: 0}
@@ -106,8 +106,8 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: UpgradeReceiver, Assembly-CSharp
-          m_MethodName: UpgradeTo2
-          m_Mode: 0
+          m_MethodName: TryUpgrade
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -116,7 +116,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  useDistance: 1.5
+  useDistance: 2
   triggerType: 9
   key: 102
   actionTemplate: {fileID: 0}
@@ -156,8 +156,8 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: UpgradeReceiver, Assembly-CSharp
-          m_MethodName: UpgradeTo3
-          m_Mode: 0
+          m_MethodName: TryUpgrade
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -166,7 +166,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  useDistance: 1.5
+  useDistance: 2
   triggerType: 9
   key: 102
   actionTemplate: {fileID: 0}
@@ -206,8 +206,8 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: UpgradeReceiver, Assembly-CSharp
-          m_MethodName: UpgradeFinal
-          m_Mode: 0
+          m_MethodName: TryUpgrade
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -216,7 +216,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  useDistance: 1.5
+  useDistance: 2
   triggerType: 9
   key: 102
   actionTemplate: {fileID: 0}

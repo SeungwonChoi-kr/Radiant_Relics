@@ -4018,11 +4018,11 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: 
-          m_MethodName: PlayOneShot
-          m_Mode: 2
+          m_MethodName: 
+          m_Mode: 1
           m_Arguments:
-            m_ObjectArgument: {fileID: 8300000, guid: 9ef5b527d90acaa428b516bbd9fc2cc4, type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -4098,8 +4098,16 @@ MonoBehaviour:
   - {fileID: 3070773576733908153, guid: e6e229531ac3b3d44aefc358a431d4b8, type: 2}
   - {fileID: 3403466014044243614, guid: e6e229531ac3b3d44aefc358a431d4b8, type: 2}
   - {fileID: -5578804710601317914, guid: e6e229531ac3b3d44aefc358a431d4b8, type: 2}
-  m_Amounts: 640000006400000064000000
+  - {fileID: 2226080808522005571, guid: e6e229531ac3b3d44aefc358a431d4b8, type: 2}
+  - {fileID: -183830824206877811, guid: e6e229531ac3b3d44aefc358a431d4b8, type: 2}
+  - {fileID: 7530237988924398570, guid: e6e229531ac3b3d44aefc358a431d4b8, type: 2}
+  - {fileID: -5163029461263222242, guid: e6e229531ac3b3d44aefc358a431d4b8, type: 2}
+  m_Amounts: 64000000640000006400000001000000010000000100000001000000
   m_Modifiers:
+  - modifiers: []
+  - modifiers: []
+  - modifiers: []
+  - modifiers: []
   - modifiers: []
   - modifiers: []
   - modifiers: []

@@ -14,7 +14,9 @@ GameObject:
   - component: {fileID: 1034691976271890220}
   - component: {fileID: 4728367624750382230}
   - component: {fileID: 5875164897105555746}
-  m_Layer: 0
+  - component: {fileID: 4185153446237342435}
+  - component: {fileID: 3120434450890590934}
+  m_Layer: 9
   m_Name: ChestWood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31,7 +33,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1434251343949534080}
@@ -110,7 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68165cdf1896c89479a91b2478670c0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: DevionGames.InventorySystem::DevionGames.InventorySystem.ItemCollection
-  saveable: 1
+  saveable: 0
   m_Items:
   - {fileID: 6078649337994363019, guid: e6e229531ac3b3d44aefc358a431d4b8, type: 2}
   m_Amounts: 01000000
@@ -168,6 +170,48 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &4185153446237342435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2360753227334873080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d3b619b2264afc43993ac557926d0ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiggableResource
+  digRequiredHits: 5
+  currentHits: 0
+  isFullyDug: 0
+  maxRiseHeight: 4
+  initialPosition: {x: 0, y: 0, z: 0}
+  dropItemPrefab: {fileID: 0}
+  minDropCount: 1
+  maxDropCount: 1
+  popForce: 0
+--- !u!65 &3120434450890590934
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2360753227334873080}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2680511030345522728
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,7 +221,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1434251343949534080}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -211,7 +255,7 @@ GameObject:
   - component: {fileID: 1564636364957127774}
   - component: {fileID: 8789779413648928066}
   - component: {fileID: 6098044078563048297}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Animated PBR Chest _Fx_D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5059,7 +5103,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3594419361553691113}
   - component: {fileID: 6846622015737290087}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WoodChest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5151,7 +5195,7 @@ GameObject:
   - component: {fileID: 8772721894512894904}
   - component: {fileID: 6357347686106250860}
   - component: {fileID: 4500087964000539708}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}

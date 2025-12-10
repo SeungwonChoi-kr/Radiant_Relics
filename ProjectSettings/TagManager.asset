@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Fire
   layers:
   - Default
   - TransparentFX
@@ -14,7 +15,7 @@ TagManager:
   - NavMesh_Blocker
   - Metal
   - DropItem
-  - 
+  - Treasure
   - Gold Mine
   - Iron Mine
   - Silver Mine

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 35e5dafa6a479b74bad185881be745cd
+timeCreated: 1498658728
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 94333
+  packageName: Dragon PBR
+  packageVersion: 1.0
+  assetPath: Assets/ThirdParty/Dragon/RedDragon 1.2/Assets/Materials/BlackWyvern.mat
+  uploadId: 256091
